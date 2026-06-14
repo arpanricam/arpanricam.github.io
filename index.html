@@ -273,6 +273,56 @@
       border-radius: 2px;
     }
 
+    /* --- FULL PUBLICATION TABLE --- */
+    .full-pub-wrapper {
+      margin-bottom: 20px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid #bae6fd;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .full-pub-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #f0f9ff;
+    }
+
+    .full-pub-table td {
+      padding: 12px 16px;
+      vertical-align: middle;
+    }
+
+    .fpt-text {
+      color: var(--text-main);
+      font-size: 0.9rem;
+    }
+
+    .fpt-action {
+      text-align: right;
+      width: 180px;
+    }
+
+    .pdf-download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .pdf-download-btn:hover {
+      background: var(--primary-hover);
+      color: #fff;
+    }
+
+    /* --- TIMELINE & LISTS --- */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -442,6 +492,15 @@
       .card {
         padding: 24px 20px;
       }
+      .full-pub-table td {
+        display: block;
+        text-align: center;
+        padding: 10px;
+      }
+      .fpt-action {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -490,25 +549,32 @@
       <!-- PUBLICATIONS MOVED TO THE VERY TOP -->
       <section id="publications" class="card">
         <h2 class="section-title">Selected Recent Works</h2>
+        
+        <!-- SHORT TABLE FOR FULL PUBLICATION LIST PDF -->
+        <div class="full-pub-wrapper">
+          <table class="full-pub-table">
+            <tr>
+              <td class="fpt-text">
+                <strong>Full Publication List:</strong> A comprehensive record of all published papers, preprints, and academic works.
+              </td>
+              <td class="fpt-action">
+                <a href="full_publications.pdf" target="_blank" class="pdf-download-btn">
+                  📄 Download PDF
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
         <div class="pub-list">
           
           <div class="pub-item">
             <span class="pub-authors">X. Cao, A. Mukherjee, and M. Sini,</span> 
             <span class="pub-title">"Effective Medium Theory for Heat Generation Using Plasmonics: A Parabolic Transmission Problem Driven by the Maxwell System,"</span> 
-            <span class="pub-journal">Mathematische Annalen</span>, Volume 393, pp. 3191–3281, 2025.
+            <span class="pub-journal">Mathematische Annalen</span>, 2025.
             <div class="pub-links">
               <a href="https://doi.org/10.1007/s00208-025-03300-9" target="_blank" class="pub-link">DOI</a>
               <a href="https://doi.org/10.48550/arXiv.2411.18091" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-                    <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain,"</span> 
-            <span class="pub-journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5616, 2023.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1137/22M1533396" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2211.03382" target="_blank" class="pub-link">arXiv</a>
             </div>
           </div>
 
@@ -542,7 +608,15 @@
             </div>
           </div>
 
-
+          <div class="pub-item">
+            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
+            <span class="pub-title">"Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain,"</span> 
+            <span class="pub-journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5616, 2023.
+            <div class="pub-links">
+              <a href="https://doi.org/10.1137/22M1533396" target="_blank" class="pub-link">DOI</a>
+              <a href="https://doi.org/10.48550/arXiv.2211.03382" target="_blank" class="pub-link">arXiv</a>
+            </div>
+          </div>
 
         </div>
       </section>
