@@ -9,12 +9,12 @@
   <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
       /* Refined Color Palette */
-      --bg-color: #e9ecef; /* Richer soft grey background for enhanced card contrast */
+      --bg-color: #e9ecef; /* Richer soft grey background */
       --card-bg: #ffffff;
       --text-main: #1f2937;
       --text-muted: #4b5563;
@@ -24,6 +24,7 @@
       --primary-hover: #1d4ed8;
       --primary-light: #eff6ff;
       --accent: #0ea5e9; /* Sky blue */
+      --journal-color: #0284c7; /* Distinct academic blue for journals */
       --border: #e5e7eb;
       
       /* Sidebar Dark Theme */
@@ -40,11 +41,11 @@
       --shadow-sm: 0 2px 4px rgba(0,0,0,0.02);
       --shadow-md: 0 8px 20px -6px rgba(0,0,0,0.06);
       --shadow-lg: 0 16px 24px -8px rgba(0,0,0,0.08);
-      --radius-lg: 16px; /* Slightly tighter curves */
+      --radius-lg: 14px; /* Tighter curves */
       --radius-md: 8px;
       
       /* Layout */
-      --sidebar-width: 340px; /* Slimmer sidebar */
+      --sidebar-width: 320px; /* Slimmer sidebar */
     }
 
     * {
@@ -61,8 +62,8 @@
       background-color: var(--bg-color);
       color: var(--text-main);
       font-family: var(--font-sans);
-      font-size: 14.5px; /* Slightly smaller base font */
-      line-height: 1.6;
+      font-size: 14px; /* Scaled down base font */
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -79,10 +80,10 @@
     /* --- ASYMMETRIC SPLIT LAYOUT --- */
     .layout-wrapper {
       display: flex;
-      max-width: 1260px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 32px 20px; /* Reduced outer padding */
-      gap: 36px; /* Smaller layout gap */
+      padding: 24px 16px; /* Reduced outer padding */
+      gap: 24px; /* Much smaller layout gap */
       align-items: flex-start;
     }
 
@@ -91,15 +92,15 @@
       width: var(--sidebar-width);
       flex-shrink: 0;
       position: sticky;
-      top: 32px;
+      top: 24px;
       background: linear-gradient(135deg, var(--sidebar-bg-1) 0%, var(--sidebar-bg-2) 100%);
       color: var(--sidebar-text);
       border-radius: var(--radius-lg);
-      padding: 40px 28px; /* Compacted layout metrics */
+      padding: 32px 24px; /* Compacted layout metrics */
       text-align: center;
       box-shadow: var(--shadow-lg);
       overflow: hidden;
-      max-height: calc(100vh - 64px);
+      max-height: calc(100vh - 48px);
       overflow-y: auto;
     }
 
@@ -118,45 +119,44 @@
     }
 
     .profile-avatar {
-      width: 80px; /* Scaled down avatar dimensions */
-      height: 80px;
+      width: 72px; /* Scaled down avatar dimensions */
+      height: 72px;
       background: #ffffff;
       color: var(--sidebar-bg-1);
       font-family: var(--font-serif);
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      margin: 0 auto 16px;
+      margin: 0 auto 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       border: 3px solid rgba(255, 255, 255, 0.2);
     }
 
     .sidebar-title {
       font-family: var(--font-serif);
-      font-size: 1.75rem; /* Compact title scaling */
+      font-size: 1.6rem; /* Compact title scaling */
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       letter-spacing: -0.01em;
       line-height: 1.2;
     }
 
     .sidebar-subtitle {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--sidebar-muted);
       font-weight: 600;
-      margin-bottom: 16px;
-      letter-spacing: 0.01em;
+      margin-bottom: 12px;
     }
 
     .sidebar-institution {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #cbd5e1;
-      margin: 0 auto 24px;
-      line-height: 1.5;
+      margin: 0 auto 20px;
+      line-height: 1.4;
     }
     
     .sidebar-institution a {
@@ -171,18 +171,17 @@
 
     .institution-subtext {
       display: block;
-      margin-top: 6px;
+      margin-top: 4px;
       font-size: 0.75rem;
       color: #94a3b8;
       font-style: italic;
-      line-height: 1.4;
     }
 
     .action-col {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
+      gap: 8px; /* Tighter button gaps */
+      margin-bottom: 24px;
     }
 
     .badge {
@@ -192,9 +191,9 @@
       gap: 6px;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(8px);
-      padding: 10px 16px;
-      border-radius: 10px;
-      font-size: 0.85rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
       font-weight: 600;
       color: #ffffff;
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -211,19 +210,19 @@
     .nav-menu {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 2px;
       text-align: left;
       border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding-top: 18px;
+      padding-top: 12px;
     }
 
     .nav-link {
-      font-size: 0.825rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: #cbd5e1;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      padding: 10px 14px;
+      padding: 8px 12px;
       border-radius: 6px;
       transition: all 0.2s;
     }
@@ -231,7 +230,7 @@
     .nav-link:hover {
       color: #ffffff;
       background: rgba(255, 255, 255, 0.08);
-      padding-left: 18px;
+      padding-left: 16px;
     }
 
     .sidebar::-webkit-scrollbar { width: 0px; }
@@ -242,25 +241,25 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      gap: 32px; /* Decreased space between cards */
+      gap: 20px; /* Highly decreased space between cards */
       min-width: 0;
     }
 
     .card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
-      padding: 40px 44px; /* More standard, neat internal card padding */
+      padding: 28px 32px; /* Tighter internal card padding */
       box-shadow: var(--shadow-md);
       border: 1px solid rgba(229, 231, 235, 0.6);
     }
 
     .section-title {
       font-family: var(--font-serif);
-      font-size: 1.6rem; /* Scaled down section headings */
+      font-size: 1.4rem; /* Scaled down section headings */
       color: var(--text-main);
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       position: relative;
-      padding-bottom: 12px;
+      padding-bottom: 8px;
     }
 
     .section-title::after {
@@ -268,7 +267,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 40px;
+      width: 36px;
       height: 3px;
       background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
       border-radius: 2px;
@@ -277,22 +276,22 @@
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 24px; /* Tightened timeline gaps */
+      gap: 16px; /* Tightened timeline gaps */
     }
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 110px 1fr; /* Snug column metrics */
-      gap: 20px;
+      grid-template-columns: 100px 1fr; /* Snug column metrics */
+      gap: 16px;
       align-items: baseline;
     }
 
     .time-badge {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
       color: var(--primary);
       background: var(--primary-light);
-      padding: 6px 12px;
+      padding: 4px 10px;
       border-radius: 6px;
       display: inline-block;
       text-align: center;
@@ -300,33 +299,33 @@
     }
 
     .item-title {
-      font-size: 1.05rem; /* Reduced sizes for list titles */
+      font-size: 0.95rem; /* Reduced sizes for list titles */
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .item-subtitle {
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       font-weight: 500;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       line-height: 1.4;
     }
 
     .item-desc {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
     }
 
     .pub-list {
       display: flex;
       flex-direction: column;
-      gap: 16px; /* Reduced publication separation */
+      gap: 12px; /* Very tight publication separation */
     }
 
     .pub-item {
-      padding: 20px 24px; /* Tighter item body padding */
+      padding: 16px 20px; /* Tighter item body padding */
       border-radius: var(--radius-md);
       background: #f8fafc;
       border-left: 3px solid var(--primary);
@@ -345,26 +344,27 @@
     }
 
     .pub-authors {
-      color: var(--text-muted);
+      font-weight: 700; /* Bold author names */
+      color: var(--text-main);
     }
 
     .pub-journal {
       font-style: italic;
-      color: #0f172a;
-      font-weight: 600;
+      color: var(--journal-color); /* Distinct color for journal names */
+      font-weight: 700;
     }
 
     .pub-links {
-      margin-top: 12px;
+      margin-top: 8px; /* Tighter margin */
       display: flex;
-      gap: 10px;
+      gap: 8px;
     }
 
     .pub-link {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 5px 12px;
+      padding: 4px 10px;
       background: #e2e8f0;
       color: #475569;
       border-radius: 4px;
@@ -383,8 +383,9 @@
 
     .bullet-list li {
       position: relative;
-      padding-left: 24px;
-      margin-bottom: 12px;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
     }
 
     .bullet-list li::before {
@@ -392,37 +393,38 @@
       position: absolute;
       left: 0;
       color: var(--accent);
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      top: 2px;
     }
 
     footer {
       text-align: center;
-      padding: 24px 0 8px;
+      padding: 12px 0 8px;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     @media (max-width: 1024px) {
       .layout-wrapper {
         flex-direction: column;
-        padding: 24px 16px;
-        gap: 28px;
+        padding: 16px;
+        gap: 20px;
       }
       .sidebar {
         width: 100%;
         position: relative;
         top: 0;
         max-height: none;
-        padding: 36px 24px;
+        padding: 24px 20px;
       }
       .nav-menu {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
+        gap: 6px;
       }
       .nav-link:hover {
-        padding-left: 14px;
+        padding-left: 12px;
       }
       .action-col {
         flex-direction: row;
@@ -431,14 +433,14 @@
       }
       .timeline-item {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 6px;
       }
       .time-badge {
         display: inline-block;
         width: fit-content;
       }
       .card {
-        padding: 32px 24px;
+        padding: 24px 20px;
       }
     }
   </style>
@@ -475,15 +477,73 @@
       </div>
 
       <nav class="nav-menu">
+        <a href="#publications" class="nav-link">Publications</a>
         <a href="#positions" class="nav-link">Positions</a>
         <a href="#education" class="nav-link">Education</a>
         <a href="#research" class="nav-link">Research</a>
-        <a href="#publications" class="nav-link">Publications</a>
         <a href="#teaching" class="nav-link">Teaching</a>
       </nav>
     </aside>
 
     <main class="content-area">
+
+      <!-- PUBLICATIONS MOVED TO THE VERY TOP -->
+      <section id="publications" class="card">
+        <h2 class="section-title">Selected Recent Works</h2>
+        <div class="pub-list">
+          
+          <div class="pub-item">
+            <span class="pub-authors">X. Cao, A. Mukherjee, and M. Sini,</span> 
+            <span class="pub-title">"Effective Medium Theory for Heat Generation Using Plasmonics: A Parabolic Transmission Problem Driven by the Maxwell System,"</span> 
+            <span class="pub-journal">Mathematische Annalen</span>, 2025.
+            <div class="pub-links">
+              <a href="https://doi.org/10.1007/s00208-025-03300-9" target="_blank" class="pub-link">DOI</a>
+              <a href="https://doi.org/10.48550/arXiv.2411.18091" target="_blank" class="pub-link">arXiv</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
+            <span class="pub-title">"Dispersive Effective Metasurface Model for Bubbly Media,"</span> 
+            <span class="pub-journal">Journal of Differential Equations</span>, vol. 456, no. 113950, 2025.
+            <div class="pub-links">
+              <a href="https://doi.org/10.1016/j.jde.2025.113950" target="_blank" class="pub-link">DOI</a>
+              <a href="https://doi.org/10.48550/arXiv.2412.14895" target="_blank" class="pub-link">arXiv</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
+            <span class="pub-title">"Dispersive Effective Model in the Time-Domain for Acoustic Waves Propagating in Bubbly Media,"</span> 
+            <span class="pub-journal">SIAM Journal on Applied Mathematics</span>, vol. 85, no. 6, pp. 2508–2542, 2025.
+            <div class="pub-links">
+              <a href="https://doi.org/10.1137/24M1692150" target="_blank" class="pub-link">DOI</a>
+              <a href="https://doi.org/10.48550/arXiv.2408.01158" target="_blank" class="pub-link">arXiv</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
+            <span class="pub-title">"Heat Generation Using Lorentzian Nanoparticles. The Full Maxwell System,"</span> 
+            <span class="pub-journal">SIAM Journal on Applied Mathematics</span>, vol. 84, no. 1, pp. 285–315, 2024.
+            <div class="pub-links">
+              <a href="https://doi.org/10.1137/23M1547597" target="_blank" class="pub-link">DOI</a>
+              <a href="https://doi.org/10.48550/arXiv.2301.06436" target="_blank" class="pub-link">arXiv</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
+            <span class="pub-title">"Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain,"</span> 
+            <span class="pub-journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5616, 2023.
+            <div class="pub-links">
+              <a href="https://doi.org/10.1137/22M1533396" target="_blank" class="pub-link">DOI</a>
+              <a href="https://doi.org/10.48550/arXiv.2211.03382" target="_blank" class="pub-link">arXiv</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
       <section id="positions" class="card">
         <h2 class="section-title">Academic Positions</h2>
@@ -495,7 +555,7 @@
               <div class="item-subtitle">
                 <a href="#" target="_blank">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a><br>
                 <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a><br>
-                <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 4px; font-style: italic;">(A joint institution founded by Lomonosov Moscow State University, Russia &amp; Beijing Institute of Technology, China)</p>
+                <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px; font-style: italic;">(A joint institution founded by Lomonosov Moscow State University, Russia &amp; Beijing Institute of Technology, China)</p>
               </div>
             </div>
           </div>
@@ -570,68 +630,11 @@
         </ul>
       </section>
 
-      <section id="publications" class="card">
-        <h2 class="section-title">Selected Recent Works</h2>
-        <div class="pub-list">
-          
-          <div class="pub-item">
-            <span class="pub-authors">X. Cao, A. Mukherjee, and M. Sini,</span> 
-            <span class="pub-title">"Effective Medium Theory for Heat Generation Using Plasmonics: A Parabolic Transmission Problem Driven by the Maxwell System,"</span> 
-            <span class="pub-journal">Mathematische Annalen</span>, 2025.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1007/s00208-025-03300-9" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2411.18091" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Dispersive Effective Metasurface Model for Bubbly Media,"</span> 
-            <span class="pub-journal">Journal of Differential Equations</span>, vol. 456, no. 113950, 2025.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1016/j.jde.2025.113950" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2412.14895" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Dispersive Effective Model in the Time-Domain for Acoustic Waves Propagating in Bubbly Media,"</span> 
-            <span class="pub-journal">SIAM Journal on Applied Mathematics</span>, vol. 85, no. 6, pp. 2508–2542, 2025.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1137/24M1692150" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2408.01158" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Heat Generation Using Lorentzian Nanoparticles. The Full Maxwell System,"</span> 
-            <span class="pub-journal">SIAM Journal on Applied Mathematics</span>, vol. 84, no. 1, pp. 285–315, 2024.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1137/23M1547597" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2301.06436" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain,"</span> 
-            <span class="pub-journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5616, 2023.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1137/22M1533396" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2211.03382" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       <section id="teaching" class="card">
         <h2 class="section-title">Teaching & Service</h2>
         
-        <h3 style="font-family: var(--font-serif); margin-bottom: 16px; font-size: 1.2rem; color: var(--primary);">Course Instructorships</h3>
-        <div class="timeline" style="margin-bottom: 32px;">
+        <h3 style="font-family: var(--font-serif); margin-bottom: 12px; font-size: 1.15rem; color: var(--primary);">Course Instructorships</h3>
+        <div class="timeline" style="margin-bottom: 24px;">
           <div class="timeline-item">
             <div class="time-badge">Summer 2026</div>
             <div><div class="item-title">Calculus 2</div></div>
@@ -640,8 +643,8 @@
             <div class="time-badge">Winter 2025</div>
             <div>
               <div class="item-title">Probability Theory and Mathematical Statistics</div>
-              <div class="item-title" style="margin-top: 6px;">Linear Algebra</div>
-              <div class="item-title" style="margin-top: 6px;">Mathematics for Biological Sciences</div>
+              <div class="item-title" style="margin-top: 4px;">Linear Algebra</div>
+              <div class="item-title" style="margin-top: 4px;">Mathematics for Biological Sciences</div>
             </div>
           </div>
           <div class="timeline-item">
@@ -650,7 +653,7 @@
           </div>
         </div>
 
-        <h3 style="font-family: var(--font-serif); margin-bottom: 16px; border-top: 1px solid var(--border); padding-top: 28px; font-size: 1.2rem; color: var(--primary);">Academic Service</h3>
+        <h3 style="font-family: var(--font-serif); margin-bottom: 12px; border-top: 1px solid var(--border); padding-top: 20px; font-size: 1.15rem; color: var(--primary);">Academic Service</h3>
         <ul class="bullet-list">
           <li><strong>Reviewer:</strong> Mathematical Models and Methods in Applied Sciences (M3AS).</li>
           <li><strong>Co-organizer:</strong> Minisymposium "Inverse Problems for Evolution Equations", 12th Applied Inverse Problem Conference (AIP2025), Rio de Janeiro, Brazil, July 2025.</li>
