@@ -24,11 +24,13 @@
       --primary-light: #e8f5e9;
       --accent: #52b788; /* Fresh accent green */
       
-      /* Journal Name & Tab Color set to Blue */
+      /* Custom Colors for Institutes & Mentors */
+      --institute-color: #0ea5e9; /* Vibrant Light Blue for Institutions */
+      --mentor-color: #2563eb; /* Classic Blue for Mentors/Supervisors */
       --journal-color: #2563eb; /* Royal blue for journal names */
       --tab-blue: #2563eb; /* Blue for DOI/arXiv links */
-      --tab-blue-bg: #eff6ff; /* Soft light blue background for tabs */
-      --tab-blue-border: #bfdbfe; /* Soft blue border for tabs */
+      --tab-blue-bg: #eff6ff; 
+      --tab-blue-border: #bfdbfe; 
       
       --border: #e2e8f0; /* Crisp subtle borders */
       
@@ -152,8 +154,8 @@
     }
     
     .sidebar-institution a {
-      color: var(--primary);
-      font-weight: 600;
+      color: var(--institute-color);
+      font-weight: 700;
       border-bottom: 1px dotted var(--border);
     }
     
@@ -164,10 +166,29 @@
 
     .institution-subtext {
       display: block;
-      margin-top: 4px;
+      margin-top: 6px;
       font-size: 0.75rem;
       color: var(--sidebar-muted);
       font-style: italic;
+    }
+
+    /* Target specific institute names applied generally */
+    .institute-name {
+      color: var(--institute-color) !important;
+      font-weight: 700;
+    }
+
+    /* Target specific mentor links */
+    .mentor-link {
+      color: var(--mentor-color) !important;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .mentor-link:hover {
+      text-decoration: underline;
+      color: var(--primary-hover) !important;
     }
 
     .action-col {
@@ -428,7 +449,6 @@
       font-weight: 700;
     }
 
-    /* Updated: Set to inline-flex so it follows right after the text */
     .pub-links {
       display: inline-flex;
       gap: 4px;
@@ -436,7 +456,6 @@
       vertical-align: baseline;
     }
 
-    /* Updated: Standardized to Blue themed tabs */
     .pub-link {
       font-size: 0.65rem;
       font-weight: 700;
@@ -481,7 +500,7 @@
     footer {
       text-align: center;
       padding: 16px 0 8px;
-      color: #cbd5c2; /* Elegant light sage silver to stand out against deep olive bg */
+      color: #cbd5c2; 
       font-size: 0.85rem;
     }
 
@@ -553,9 +572,9 @@
       <div class="sidebar-subtitle">Lecturer (Tenure-Track)</div>
       
       <div class="sidebar-institution">
-        <a href="#" target="_blank">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a><br>
-        <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a>
-        <p class="institution-subtext">(A joint institution founded by Lomonosov Moscow State University, Russia &amp; Beijing Institute of Technology, China)</p>
+        <a href="https://smbu.edu.cn/info/1109/2513.htm" target="_blank" class="institute-name">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a><br>
+        <a href="https://smbu.edu.cn" target="_blank" class="institute-name">Shenzhen MSU-BIT University</a>
+        <p class="institution-subtext">(A joint institution founded by <span class="institute-name">Lomonosov Moscow State University</span>, Russia &amp; <span class="institute-name">Beijing Institute of Technology</span>, China)</p>
       </div>
       
       <div class="action-col">
@@ -619,7 +638,7 @@
             </div>
           </div>
 
-                    <div class="pub-item">
+          <div class="pub-item">
             <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
             <span class="pub-title">"Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain,"</span> 
             <span class="pub-journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5516, 2023.
@@ -659,8 +678,6 @@
             </div>
           </div>
 
-
-
         </div>
       </section>
 
@@ -672,34 +689,34 @@
             <div>
               <div class="item-title">Lecturer (Tenure-Track Assistant Professor)</div>
               <div class="item-subtitle">
-                <a href="#" target="_blank">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a>, <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a>, China.
-                <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px; font-style: italic;">(A joint institution founded by Lomonosov Moscow State University, Russia &amp; Beijing Institute of Technology, China)</p>
+                <a href="https://smbu.edu.cn/info/1109/2513.htm" target="_blank" class="institute-name">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a>, <a href="https://smbu.edu.cn" target="_blank" class="institute-name">Shenzhen MSU-BIT University</a>, China.
+                <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px; font-style: italic;">(A joint institution founded by <span class="institute-name">Lomonosov Moscow State University</span>, Russia &amp; <span class="institute-name">Beijing Institute of Technology</span>, China)</p>
               </div>
-              <div class="item-desc">Mentor: Prof. Dr. Hongyu Liu (Chair Professor, City University of Hong Kong)</div>
+              <div class="item-desc">Mentor: <a href="https://www.cityu.edu.hk/ma/people/profile/liuhongyu.htm" target="_blank" class="mentor-link">Prof. Dr. Hongyu Liu</a> (Chair Professor, <span class="institute-name">City University of Hong Kong</span>)</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="time-badge">Dec 2023—July 2024</div>
             <div>
               <div class="item-title">Postdoctoral Research Scientist</div>
-              <div class="item-subtitle">Johann Radon Institute (RICAM), Austrian Academy of Sciences (ÖAW), Austria.</div>
-              <div class="item-desc">Project [FWF-P32660/36942]: Electromagnetism with Extreme Materials: Modeling, Analysis and Applications / Resolvent Analysis of Sub-wavelength Resonators.<br>Project Leader: Univ.-Doz. Dr. Mourad Sini</div>
+              <div class="item-subtitle institute-name">Johann Radon Institute (RICAM), Austrian Academy of Sciences (ÖAW), Austria.</div>
+              <div class="item-desc">Project [FWF-P32660/36942]: Electromagnetism with Extreme Materials: Modeling, Analysis and Applications / Resolvent Analysis of Sub-wavelength Resonators.<br>Project Leader: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank" class="mentor-link">Univ.-Doz. Dr. Mourad Sini</a></div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="time-badge">Aug 2020—Nov 2023</div>
             <div>
               <div class="item-title">Doctoral Research Scientist</div>
-              <div class="item-subtitle">Johann Radon Institute (RICAM), Austrian Academy of Sciences (ÖAW), Austria.</div>
-              <div class="item-desc">Projects [FWF-P32660]: Electromagnetism with Extreme Materials: Modeling, Analysis and Applications.<br>Project Leader: Univ.-Doz. Dr. Mourad Sini</div>
+              <div class="item-subtitle institute-name">Johann Radon Institute (RICAM), Austrian Academy of Sciences (ÖAW), Austria.</div>
+              <div class="item-desc">Projects [FWF-P32660]: Electromagnetism with Extreme Materials: Modeling, Analysis and Applications.<br>Project Leader: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank" class="mentor-link">Univ.-Doz. Dr. Mourad Sini</a></div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="time-badge">Sep 2019—Mar 2020</div>
             <div>
               <div class="item-title">Visiting Researcher</div>
-              <div class="item-subtitle">Karlsruhe Institute of Technology (KIT), Germany.</div>
-              <div class="item-desc">Department of Mathematics &amp; Steinbuch Center for Computing (SCC).<br>Mentors: Prof. Dr. Sundar S &amp; Prof. Dr. Martin Frank</div>
+              <div class="item-subtitle institute-name">Karlsruhe Institute of Technology (KIT), Germany.</div>
+              <div class="item-desc">Department of Mathematics &amp; Steinbuch Center for Computing (SCC).<br>Mentors: <a href="https://math.iitm.ac.in/faculty/slnt/" target="_blank" class="mentor-link">Prof. Dr. Sundar S</a> &amp; <a href="https://www.scc.kit.edu/personen/martin.frank.php" target="_blank" class="mentor-link">Prof. Dr. Martin Frank</a></div>
             </div>
           </div>
         </div>
@@ -712,23 +729,23 @@
             <div class="time-badge">Oct 2021—Nov 2023</div>
             <div>
               <div class="item-title">Doctor of Philosophy (Ph.D.) in Industrial Mathematics</div>
-              <div class="item-subtitle">Johannes Kepler University Linz, Austria</div>
-              <div class="item-desc">Thesis: <em>Mathematical Analysis of Therapy Modalities using Heat Generation or Acoustic Cavitation</em>.<br>Supervisors: Univ.-Doz. Dr. Mourad Sini &amp; Prof. Dr. Haibing Wang. Grade: 1 (Excellent).</div>
+              <div class="item-subtitle institute-name">Johannes Kepler University Linz, Austria</div>
+              <div class="item-desc">Thesis: <em>Mathematical Analysis of Therapy Modalities using Heat Generation or Acoustic Cavitation</em>.<br>Supervisors: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank" class="mentor-link">Univ.-Doz. Dr. Mourad Sini</a> &amp; <a href="#" target="_blank" class="mentor-link">Prof. Dr. Haibing Wang</a>. Grade: 1 (Excellent).</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="time-badge">Aug 2018—May 2020</div>
             <div>
               <div class="item-title">M.Tech. in Industrial Mathematics &amp; Scientific Computing</div>
-              <div class="item-subtitle">Indian Institute of Technology Madras, India &amp; KIT, Germany</div>
-              <div class="item-desc">Thesis: <em>Approximate-Newton Approach for the Intrusive Polynomial Moment Method</em>.<br>Supervisors: Prof. Dr. Sundar S &amp; Prof. Dr. Martin Frank. Grade: 8.91/10.</div>
+              <div class="item-subtitle institute-name">Indian Institute of Technology Madras, India &amp; KIT, Germany</div>
+              <div class="item-desc">Thesis: <em>Approximate-Newton Approach for the Intrusive Polynomial Moment Method</em>.<br>Supervisors: <a href="https://math.iitm.ac.in/faculty/slnt/" target="_blank" class="mentor-link">Prof. Dr. Sundar S</a> &amp; <a href="https://www.scc.kit.edu/personen/martin.frank.php" target="_blank" class="mentor-link">Prof. Dr. Martin Frank</a>. Grade: 8.91/10.</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="time-badge">Aug 2015—May 2017</div>
             <div>
               <div class="item-title">M.Sc. in Mathematics</div>
-              <div class="item-subtitle">Pondicherry University (A Central University), India</div>
+              <div class="item-subtitle institute-name">Pondicherry University (A Central University), India</div>
               <div class="item-desc">Grade: 9.83/10.</div>
             </div>
           </div>
@@ -736,7 +753,7 @@
             <div class="time-badge">July 2011—July 2015</div>
             <div>
               <div class="item-title">B.Sc. in Mathematics</div>
-              <div class="item-subtitle">Vivekananda Mahavidyalaya, The University of Burdwan, India</div>
+              <div class="item-subtitle institute-name">Vivekananda Mahavidyalaya, The University of Burdwan, India</div>
               <div class="item-desc">Grade: 7.2/10.</div>
             </div>
           </div>
