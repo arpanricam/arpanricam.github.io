@@ -113,17 +113,11 @@
     }
 
     .profile-avatar {
-      width: 72px;
-      height: 72px;
-      background: var(--primary-light);
-      color: var(--primary);
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 85px;
+      height: 85px;
       border-radius: 50%;
+      object-fit: cover; /* Keeps the image from stretching or looking squished */
+      display: block;
       margin: 0 auto 12px;
       box-shadow: var(--shadow-sm);
       border: 2px solid var(--border);
@@ -567,7 +561,7 @@
   <div class="layout-wrapper">
     
     <aside class="sidebar" id="top">
-      <div class="profile-avatar" aria-hidden="true">AM</div>
+      <img src="profile.jpg" alt="Dr. Arpan Mukherjee" class="profile-avatar" />
       <h1 class="sidebar-title">Dr. Arpan Mukherjee</h1>
       <div class="sidebar-subtitle">Lecturer (Tenure-Track)</div>
       
