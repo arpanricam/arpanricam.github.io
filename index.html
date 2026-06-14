@@ -13,29 +13,38 @@
   
   <style>
     :root {
-      /* Color Palette */
-      --bg-color: #f4f7f6;
+      /* Refined Color Palette */
+      --bg-color: #f3f4f6; /* Soft gray background for contrast */
       --card-bg: #ffffff;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --primary: #3b82f6;
-      --primary-hover: #2563eb;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      
+      /* Vibrant Accents */
+      --primary: #2563eb; /* Royal blue */
+      --primary-hover: #1d4ed8;
       --primary-light: #eff6ff;
-      --accent: #8b5cf6;
-      --border: #e2e8f0;
+      --accent: #0ea5e9; /* Sky blue */
+      --border: #e5e7eb;
+      
+      /* Sidebar Dark Theme */
+      --sidebar-bg-1: #1e3a8a; /* Deep Indigo */
+      --sidebar-bg-2: #312e81; /* Midnight Purple */
+      --sidebar-text: #f8fafc;
+      --sidebar-muted: #93c5fd;
       
       /* Typography */
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
       
       /* Shadows & Radii */
-      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.03), 0 2px 4px -1px rgba(0,0,0,0.03);
-      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.01);
+      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+      --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.03);
+      --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
       --radius-lg: 24px;
       --radius-md: 12px;
       
       /* Layout */
-      --sidebar-width: 360px;
+      --sidebar-width: 380px;
     }
 
     * {
@@ -52,7 +61,7 @@
       background-color: var(--bg-color);
       color: var(--text-main);
       font-family: var(--font-sans);
-      font-size: 15px;
+      font-size: 15.5px;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
@@ -70,34 +79,36 @@
     /* --- ASYMMETRIC SPLIT LAYOUT --- */
     .layout-wrapper {
       display: flex;
-      max-width: 1300px;
+      max-width: 1350px;
       margin: 0 auto;
       padding: 48px 24px;
-      gap: 48px;
+      gap: 56px;
       align-items: flex-start;
     }
 
-    /* --- STICKY SIDEBAR --- */
+    /* --- STICKY SIDEBAR (DARK ELEGANT THEME) --- */
     .sidebar {
       width: var(--sidebar-width);
       flex-shrink: 0;
       position: sticky;
       top: 48px;
-      background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+      background: linear-gradient(135deg, var(--sidebar-bg-1) 0%, var(--sidebar-bg-2) 100%);
+      color: var(--sidebar-text);
       border-radius: var(--radius-lg);
-      padding: 48px 32px;
+      padding: 56px 40px;
       text-align: center;
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-lg);
       overflow: hidden;
       max-height: calc(100vh - 96px);
       overflow-y: auto;
     }
 
+    /* Decorative overlay in sidebar */
     .sidebar::before {
       content: '';
       position: absolute;
-      top: -20%; left: -20%; width: 140%; height: 140%;
-      background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 60%);
+      top: -30%; left: -30%; width: 160%; height: 160%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%);
       pointer-events: none;
       z-index: 0;
     }
@@ -108,55 +119,70 @@
     }
 
     .profile-avatar {
-      width: 90px;
-      height: 90px;
+      width: 96px;
+      height: 96px;
       background: #ffffff;
-      color: var(--primary);
+      color: var(--sidebar-bg-1);
       font-family: var(--font-serif);
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      margin: 0 auto 20px;
-      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
-      border: 4px solid rgba(255, 255, 255, 0.6);
+      margin: 0 auto 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: 4px solid rgba(255, 255, 255, 0.2);
     }
 
     .sidebar-title {
       font-family: var(--font-serif);
       font-size: 2.2rem;
       font-weight: 700;
-      color: #0f172a;
+      color: #ffffff;
       margin-bottom: 8px;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
     }
 
     .sidebar-subtitle {
-      font-size: 1rem;
-      color: var(--primary-hover);
+      font-size: 1.05rem;
+      color: var(--sidebar-muted);
       font-weight: 600;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
     }
 
     .sidebar-institution {
       font-size: 0.9rem;
-      color: #475569;
-      margin: 0 auto 24px;
-      line-height: 1.5;
+      color: #cbd5e1;
+      margin: 0 auto 32px;
+      line-height: 1.6;
     }
     
     .sidebar-institution a {
-      font-weight: 500;
+      color: #ffffff;
+      font-weight: 600;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+    }
+    
+    .sidebar-institution a:hover {
+      border-bottom-color: #ffffff;
+    }
+
+    .institution-subtext {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      font-style: italic;
     }
 
     .action-col {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 32px;
+      gap: 12px;
+      margin-bottom: 40px;
     }
 
     .badge {
@@ -164,23 +190,23 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(8px);
-      padding: 10px 16px;
+      padding: 12px 20px;
       border-radius: 12px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      color: #334155;
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
       box-shadow: var(--shadow-sm);
-      transition: all 0.2s;
+      transition: all 0.3s ease;
     }
 
     .badge:hover {
       background: #ffffff;
-      color: var(--primary);
+      color: var(--sidebar-bg-1);
       transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
     }
 
     .nav-menu {
@@ -188,24 +214,25 @@
       flex-direction: column;
       gap: 6px;
       text-align: left;
-      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
       padding-top: 24px;
     }
 
     .nav-link {
       font-size: 0.9rem;
       font-weight: 600;
-      color: #475569;
+      color: #cbd5e1;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      padding: 10px 16px;
+      padding: 12px 16px;
       border-radius: 8px;
       transition: all 0.2s;
     }
 
     .nav-link:hover {
-      color: var(--primary);
-      background: rgba(255, 255, 255, 0.6);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      padding-left: 20px; /* Slight indent effect on hover */
     }
 
     .sidebar::-webkit-scrollbar { width: 0px; }
@@ -216,30 +243,31 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 48px;
       min-width: 0;
     }
 
     .card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
-      padding: 48px;
+      padding: 56px;
       box-shadow: var(--shadow-md);
-      border: 1px solid rgba(226, 232, 240, 0.6);
-      transition: transform 0.3s ease;
+      border: 1px solid rgba(229, 231, 235, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
     }
 
     .section-title {
       font-family: var(--font-serif);
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: var(--text-main);
-      margin-bottom: 32px;
+      margin-bottom: 40px;
       position: relative;
-      padding-bottom: 12px;
+      padding-bottom: 16px;
     }
 
     .section-title::after {
@@ -247,51 +275,53 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 40px;
-      height: 3px;
-      background: var(--primary);
+      width: 48px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
       border-radius: 2px;
     }
 
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      gap: 32px;
     }
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 130px 1fr;
       gap: 24px;
       align-items: baseline;
     }
 
     .time-badge {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: var(--primary);
       background: var(--primary-light);
-      padding: 6px 12px;
+      padding: 8px 16px;
       border-radius: 8px;
       display: inline-block;
       text-align: center;
+      border: 1px solid rgba(37, 99, 235, 0.1);
     }
 
     .item-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .item-subtitle {
       color: var(--text-muted);
       font-weight: 500;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      line-height: 1.5;
     }
 
     .item-desc {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
     }
 
@@ -302,15 +332,16 @@
     }
 
     .pub-item {
-      padding: 24px;
+      padding: 28px;
       border-radius: var(--radius-md);
       background: #f8fafc;
-      border-left: 4px solid var(--accent);
-      transition: all 0.2s ease;
+      border-left: 4px solid var(--primary);
+      transition: all 0.3s ease;
     }
 
     .pub-item:hover {
       background: #f1f5f9;
+      border-left-color: var(--accent);
     }
 
     .pub-title {
@@ -326,24 +357,25 @@
     .pub-journal {
       font-style: italic;
       color: #0f172a;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .pub-links {
-      margin-top: 14px;
+      margin-top: 16px;
       display: flex;
-      gap: 8px;
+      gap: 12px;
     }
 
     .pub-link {
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 6px 14px;
       background: #e2e8f0;
       color: #475569;
       border-radius: 6px;
       letter-spacing: 0.05em;
+      transition: all 0.2s;
     }
 
     .pub-link:hover {
@@ -357,41 +389,45 @@
 
     .bullet-list li {
       position: relative;
-      padding-left: 24px;
-      margin-bottom: 12px;
+      padding-left: 28px;
+      margin-bottom: 16px;
     }
 
     .bullet-list li::before {
       content: '✦';
       position: absolute;
       left: 0;
-      color: var(--primary);
-      font-size: 0.9rem;
+      color: var(--accent);
+      font-size: 1rem;
     }
 
     footer {
       text-align: center;
-      padding: 24px 0;
+      padding: 32px 0;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
     @media (max-width: 1024px) {
       .layout-wrapper {
         flex-direction: column;
-        padding: 32px 24px;
+        padding: 32px 20px;
       }
       .sidebar {
         width: 100%;
         position: relative;
         top: 0;
         max-height: none;
-        padding: 40px 24px;
+        padding: 48px 32px;
       }
       .nav-menu {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 12px;
+      }
+      .nav-link:hover {
+        padding-left: 16px;
       }
       .action-col {
         flex-direction: row;
@@ -407,7 +443,7 @@
         width: fit-content;
       }
       .card {
-        padding: 32px 24px;
+        padding: 40px 24px;
       }
     }
   </style>
@@ -416,13 +452,16 @@
 
   <div class="layout-wrapper">
     
+    <!-- ELEGANT DARK SIDEBAR -->
     <aside class="sidebar" id="top">
       <div class="profile-avatar" aria-hidden="true">AM</div>
       <h1 class="sidebar-title">Dr. Arpan Mukherjee</h1>
       <div class="sidebar-subtitle">Lecturer (Tenure-Track)</div>
+      
       <div class="sidebar-institution">
         <a href="#" target="_blank">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a><br>
-        <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a>, China
+        <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a>
+        <span class="institution-subtext">(Moscow State University (MSU), Russia &amp; Beĳing Institute of Technology (BIT), China)</span>
       </div>
       
       <div class="action-col">
@@ -460,7 +499,8 @@
               <div class="item-title">Lecturer (Tenure-Track Assistant Professor)</div>
               <div class="item-subtitle">
                 <a href="#" target="_blank">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a><br>
-                <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a>, China
+                <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a><br>
+                <span style="font-size: 0.9em; color: var(--text-muted);">(Moscow State University (MSU), Russia &amp; Beĳing Institute of Technology (BIT), China)</span>
               </div>
             </div>
           </div>
@@ -595,8 +635,8 @@
       <section id="teaching" class="card">
         <h2 class="section-title">Teaching & Service</h2>
         
-        <h3 style="font-family: var(--font-serif); margin-bottom: 20px; font-size: 1.3rem;">Course Instructorships</h3>
-        <div class="timeline" style="margin-bottom: 40px;">
+        <h3 style="font-family: var(--font-serif); margin-bottom: 24px; font-size: 1.4rem; color: var(--primary);">Course Instructorships</h3>
+        <div class="timeline" style="margin-bottom: 48px;">
           <div class="timeline-item">
             <div class="time-badge">Summer 2026</div>
             <div><div class="item-title">Calculus 2</div></div>
@@ -605,8 +645,8 @@
             <div class="time-badge">Winter 2025</div>
             <div>
               <div class="item-title">Probability Theory and Mathematical Statistics</div>
-              <div class="item-title" style="margin-top: 8px;">Linear Algebra</div>
-              <div class="item-title" style="margin-top: 8px;">Mathematics for Biological Sciences</div>
+              <div class="item-title" style="margin-top: 10px;">Linear Algebra</div>
+              <div class="item-title" style="margin-top: 10px;">Mathematics for Biological Sciences</div>
             </div>
           </div>
           <div class="timeline-item">
@@ -615,7 +655,7 @@
           </div>
         </div>
 
-        <h3 style="font-family: var(--font-serif); margin-bottom: 20px; border-top: 1px solid var(--border); padding-top: 32px; font-size: 1.3rem;">Academic Service</h3>
+        <h3 style="font-family: var(--font-serif); margin-bottom: 24px; border-top: 1px solid var(--border); padding-top: 40px; font-size: 1.4rem; color: var(--primary);">Academic Service</h3>
         <ul class="bullet-list">
           <li><strong>Reviewer:</strong> Mathematical Models and Methods in Applied Sciences (M3AS).</li>
           <li><strong>Co-organizer:</strong> Minisymposium "Inverse Problems for Evolution Equations", 12th Applied Inverse Problem Conference (AIP2025), Rio de Janeiro, Brazil, July 2025.</li>
