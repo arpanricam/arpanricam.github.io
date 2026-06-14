@@ -6,7 +6,6 @@
   <title>Dr. Arpan Mukherjee — Academic Profile</title>
   <meta name="description" content="Personal academic homepage of Dr. Arpan Mukherjee" />
   
-  <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -273,9 +272,9 @@
       border-radius: 2px;
     }
 
-    /* --- FULL PUBLICATION TABLE --- */
+    /* --- COMPACT FULL PUBLICATION TABLE --- */
     .full-pub-wrapper {
-      margin-bottom: 20px;
+      margin-bottom: 12px; /* Smaller gap below table */
       border-radius: var(--radius-md);
       overflow: hidden;
       border: 1px solid #bae6fd;
@@ -289,29 +288,29 @@
     }
 
     .full-pub-table td {
-      padding: 12px 16px;
+      padding: 10px 14px; /* Thinner cell padding */
       vertical-align: middle;
     }
 
     .fpt-text {
       color: var(--text-main);
-      font-size: 0.9rem;
+      font-size: 0.85rem; /* Marginally scaled down text */
     }
 
     .fpt-action {
       text-align: right;
-      width: 180px;
+      width: 150px;
     }
 
     .pdf-download-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       background: var(--primary);
       color: #fff;
-      padding: 8px 16px;
+      padding: 6px 12px; /* More standard button dimension */
       border-radius: 6px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 700;
       transition: background 0.2s;
       text-decoration: none;
@@ -331,21 +330,22 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 100px 1fr; /* Snug column metrics */
+      grid-template-columns: 135px 1fr; /* Widened slightly to elegantly support full text dates */
       gap: 16px;
       align-items: baseline;
     }
 
     .time-badge {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 700;
       color: var(--primary);
       background: var(--primary-light);
-      padding: 4px 10px;
+      padding: 4px 8px;
       border-radius: 6px;
       display: inline-block;
       text-align: center;
       border: 1px solid rgba(37, 99, 235, 0.08);
+      white-space: nowrap;
     }
 
     .item-title {
@@ -368,18 +368,20 @@
       color: var(--text-muted);
     }
 
+    /* --- CONDENSED PUBLICATIONS AREA --- */
     .pub-list {
       display: flex;
       flex-direction: column;
-      gap: 12px; /* Very tight publication separation */
+      gap: 8px; /* Tighter publication separating gap */
     }
 
     .pub-item {
-      padding: 16px 20px; /* Tighter item body padding */
+      padding: 10px 14px; /* Reduced vertical space significantly */
       border-radius: var(--radius-md);
       background: #f8fafc;
       border-left: 3px solid var(--primary);
       transition: all 0.2s ease;
+      font-size: 0.85rem; /* Scaled down content size */
     }
 
     .pub-item:hover {
@@ -405,16 +407,16 @@
     }
 
     .pub-links {
-      margin-top: 8px; /* Tighter margin */
+      margin-top: 6px; /* Trimmed margin spacing */
       display: flex;
-      gap: 8px;
+      gap: 6px;
     }
 
     .pub-link {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 3px 8px;
       background: #e2e8f0;
       color: #475569;
       border-radius: 4px;
@@ -508,7 +510,6 @@
 
   <div class="layout-wrapper">
     
-    <!-- ELEGANT DARK SIDEBAR -->
     <aside class="sidebar" id="top">
       <div class="profile-avatar" aria-hidden="true">AM</div>
       <h1 class="sidebar-title">Dr. Arpan Mukherjee</h1>
@@ -546,11 +547,9 @@
 
     <main class="content-area">
 
-      <!-- PUBLICATIONS MOVED TO THE VERY TOP -->
       <section id="publications" class="card">
         <h2 class="section-title">Selected Recent Works</h2>
         
-        <!-- SHORT TABLE FOR FULL PUBLICATION LIST PDF -->
         <div class="full-pub-wrapper">
           <table class="full-pub-table">
             <tr>
@@ -571,7 +570,7 @@
           <div class="pub-item">
             <span class="pub-authors">X. Cao, A. Mukherjee, and M. Sini,</span> 
             <span class="pub-title">"Effective Medium Theory for Heat Generation Using Plasmonics: A Parabolic Transmission Problem Driven by the Maxwell System,"</span> 
-            <span class="pub-journal">Mathematische Annalen</span>, Volume 393, pp. 3191–3281, 2025.
+            <span class="pub-journal">Mathematische Annalen</span>, vol. 393, no. 2-3, pp. 3191–3281, 2025.
             <div class="pub-links">
               <a href="https://doi.org/10.1007/s00208-025-03300-9" target="_blank" class="pub-link">DOI</a>
               <a href="https://doi.org/10.48550/arXiv.2411.18091" target="_blank" class="pub-link">arXiv</a>
@@ -581,7 +580,7 @@
           <div class="pub-item">
             <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
             <span class="pub-title">"Dispersive Effective Metasurface Model for Bubbly Media,"</span> 
-            <span class="pub-journal">Journal of Differential Equations</span>, vol. 456, no. 113950, 2025.
+            <span class="pub-journal">Journal of Differential Equations</span>, vol. 456, no. 113950, 2026.
             <div class="pub-links">
               <a href="https://doi.org/10.1016/j.jde.2025.113950" target="_blank" class="pub-link">DOI</a>
               <a href="https://doi.org/10.48550/arXiv.2412.14895" target="_blank" class="pub-link">arXiv</a>
@@ -625,38 +624,38 @@
         <h2 class="section-title">Academic Positions</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="time-badge">2024—Pres.</div>
+            <div class="time-badge">Sept 2024—Present</div>
             <div>
               <div class="item-title">Lecturer (Tenure-Track Assistant Professor)</div>
               <div class="item-subtitle">
-                <a href="#" target="_blank">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a><br>
-                <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a><br>
+                <a href="#" target="_blank">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a>, <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a>, China.
                 <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px; font-style: italic;">(A joint institution founded by Lomonosov Moscow State University, Russia &amp; Beijing Institute of Technology, China)</p>
               </div>
+              <div class="item-desc">Mentor: Prof. Dr. Hongyu Liu (Chair Professor, City University of Hong Kong)</div>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="time-badge">2023—2024</div>
+            <div class="time-badge">Dec 2023—July 2024</div>
             <div>
               <div class="item-title">Postdoctoral Research Scientist</div>
-              <div class="item-subtitle">Johann Radon Institute (RICAM), Austrian Academy of Sciences</div>
-              <div class="item-desc">Mentor: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a></div>
+              <div class="item-subtitle">Johann Radon Institute (RICAM), Austrian Academy of Sciences (ÖAW), Austria.</div>
+              <div class="item-desc">Project [FWF-P32660]: Electromagnetism with Extreme Materials: Modeling, Analysis and Applications.<br>Project Leader: Univ.-Doz. Dr. Mourad Sini</div>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="time-badge">2020—2023</div>
+            <div class="time-badge">Aug 2020—Nov 2023</div>
             <div>
               <div class="item-title">Doctoral Research Scientist</div>
-              <div class="item-subtitle">Johann Radon Institute (RICAM), Austrian Academy of Sciences</div>
-              <div class="item-desc">Mentor: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a></div>
+              <div class="item-subtitle">Johann Radon Institute (RICAM), Austrian Academy of Sciences (ÖAW), Austria.</div>
+              <div class="item-desc">Projects [FWF-P32660/36942]: Electromagnetism with Extreme Materials / Resolvent Analysis of Sub-wavelength Resonators.<br>Project Leader: Univ.-Doz. Dr. Mourad Sini</div>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="time-badge">2019—2020</div>
+            <div class="time-badge">Sep 2019—Mar 2020</div>
             <div>
               <div class="item-title">Visiting Researcher</div>
-              <div class="item-subtitle">Karlsruhe Institute of Technology (KIT), Germany</div>
-              <div class="item-desc">Mentors: <a href="#" target="_blank">Prof. Dr. Sundar S</a> &amp; <a href="#" target="_blank">Prof. Dr. Martin Frank</a></div>
+              <div class="item-subtitle">Karlsruhe Institute of Technology (KIT), Germany.</div>
+              <div class="item-desc">Department of Mathematics &amp; Steinbuch Center for Computing (SCC).<br>Mentors: Prof. Dr. Sundar S &amp; Prof. Dr. Martin Frank</div>
             </div>
           </div>
         </div>
@@ -666,32 +665,35 @@
         <h2 class="section-title">Education</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="time-badge">2021—2023</div>
+            <div class="time-badge">Oct 2021—Nov 2023</div>
             <div>
-              <div class="item-title">Ph.D. in Mathematics</div>
-              <div class="item-subtitle">Johannes Kepler Universität Linz, Austria</div>
-              <div class="item-desc">Mentors: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a> &amp; <a href="#" target="_blank">Prof. Dr. Haibing Wang</a></div>
+              <div class="item-title">Doctor of Philosophy (Ph.D.) in Industrial Mathematics</div>
+              <div class="item-subtitle">Johannes Kepler University Linz, Austria</div>
+              <div class="item-desc">Thesis: <em>Mathematical Analysis of Therapy Modalities using Heat Generation or Acoustic Cavitation</em>.<br>Supervisors: Univ.-Doz. Dr. Mourad Sini &amp; Prof. Dr. Haibing Wang. Grade: 1 (Excellent).</div>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="time-badge">2018—2020</div>
+            <div class="time-badge">Aug 2018—May 2020</div>
             <div>
               <div class="item-title">M.Tech. in Industrial Mathematics &amp; Scientific Computing</div>
-              <div class="item-subtitle">Indian Institute of Technology Madras, India</div>
+              <div class="item-subtitle">Indian Institute of Technology Madras, India &amp; KIT, Germany</div>
+              <div class="item-desc">Thesis: <em>Approximate-Newton Approach for the Intrusive Polynomial Moment Method</em>.<br>Supervisors: Prof. Dr. Sundar S &amp; Prof. Dr. Martin Frank. Grade: 8.91/10.</div>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="time-badge">2015—2017</div>
+            <div class="time-badge">Aug 2015—May 2017</div>
             <div>
               <div class="item-title">M.Sc. in Mathematics</div>
-              <div class="item-subtitle">Pondicherry University, India</div>
+              <div class="item-subtitle">Pondicherry University (A Central University), India</div>
+              <div class="item-desc">Grade: 9.83/10.</div>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="time-badge">2011—2015</div>
+            <div class="time-badge">July 2011—July 2015</div>
             <div>
               <div class="item-title">B.Sc. in Mathematics</div>
-              <div class="item-subtitle">The University of Burdwan, India</div>
+              <div class="item-subtitle">Vivekananda Mahavidyalaya, The University of Burdwan, India</div>
+              <div class="item-desc">Grade: 7.2/10.</div>
             </div>
           </div>
         </div>
@@ -720,7 +722,7 @@
             <div>
               <div class="item-title">Probability Theory and Mathematical Statistics</div>
               <div class="item-title" style="margin-top: 4px;">Linear Algebra</div>
-              <div class="item-title" style="margin-top: 4px;">Mathematics for Biological Sciences</div>
+              <div class="item-title" style="margin-top: 4px;">Mathematics for Biological Sciences (Calculus &amp; Linear Algebra)</div>
             </div>
           </div>
           <div class="timeline-item">
@@ -732,7 +734,7 @@
         <h3 style="font-family: var(--font-serif); margin-bottom: 12px; border-top: 1px solid var(--border); padding-top: 20px; font-size: 1.15rem; color: var(--primary);">Academic Service</h3>
         <ul class="bullet-list">
           <li><strong>Reviewer:</strong> Mathematical Models and Methods in Applied Sciences (M3AS).</li>
-          <li><strong>Co-organizer:</strong> Minisymposium "Inverse Problems for Evolution Equations", 12th Applied Inverse Problem Conference (AIP2025), Rio de Janeiro, Brazil, July 2025.</li>
+          <li><strong>Co-organizer:</strong> Minisymposium "Inverse Problems for Evolution Equations", 12th Applied Inverse Problem Conference (AIP2025), Rio de Janeiro, Brazil, July 28–August 1, 2025.</li>
         </ul>
       </section>
 
