@@ -43,20 +43,51 @@
       padding: 64px 24px 96px;
     }
 
-    /* Header & Typography */
+    /* Header & Institutional Info */
     header {
       margin-bottom: 40px;
     }
 
     h1 {
       font-family: 'Merriweather', Georgia, serif;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 700;
       color: #0f172a;
-      margin: 0 0 12px 0;
+      margin: 0 0 16px 0;
       letter-spacing: -0.02em;
     }
 
+    .institution-block {
+      margin-bottom: 20px;
+    }
+
+    .institution {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #334155;
+      margin: 0 0 6px 0;
+    }
+
+    .partnership {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin: 24px 0 28px 0;
+    }
+
+    .contact-email {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* Typography Elements */
     h2 {
       font-family: 'Inter', sans-serif;
       font-size: 1.1rem;
@@ -100,27 +131,26 @@
       gap: 10px;
       background: var(--accent);
       color: #ffffff;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 14px;
       text-decoration: none;
-      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.15);
       transition: all 0.2s ease;
-      margin: 16px 0 24px 0;
     }
 
     .cv-button:hover {
       background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
       color: #ffffff;
       text-decoration: none;
     }
 
     .cv-button svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
     }
 
     /* Navigation */
@@ -168,12 +198,6 @@
       left: 0;
       color: var(--text-muted);
       font-weight: bold;
-    }
-
-    /* Section Specific Styles */
-    .institution {
-      font-size: 1.05rem;
-      color: #334155;
     }
 
     /* Unified Publications Block */
@@ -233,7 +257,6 @@
       position: relative;
     }
 
-    /* Highlight the top-most (latest) semester */
     .timeline-item:first-child {
       border-left-color: var(--accent);
     }
@@ -292,6 +315,7 @@
       body { padding: 32px 16px 64px; }
       h1 { font-size: 1.8rem; }
       .publications-container { padding: 16px; }
+      .header-actions { flex-direction: column; align-items: start; gap: 14px; }
       .cv-button { width: 100%; justify-content: center; }
     }
 
@@ -310,20 +334,34 @@
 
   <header>
     <h1 id="top">Dr. Arpan Mukherjee</h1>
-    <p class="institution">MSU-BIT SMBU Joint Research Center of Applied Mathematics — <strong>Shenzhen MSU-BIT University</strong>, Shenzhen, China ((Moscow State University (MSU), Russia & Beĳing Institute of Technology (BIT), China).)</p>
-    <p class="muted" style="margin-bottom: 4px;">Email: <a href="mailto:arpan.mukherjee@smbu.edu.cn">arpan.mukherjee@smbu.edu.cn</a></p>
     
-    <!-- Prominent CV Download Button -->
-    <a href="cv.pdf" class="cv-button" aria-label="Download Curriculum Vitae">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-        <polyline points="14 2 14 8 20 8"></polyline>
-        <line x1="16" y1="13" x2="8" y2="13"></line>
-        <line x1="16" y1="17" x2="8" y2="17"></line>
-        <polyline points="10 9 9 9 8 9"></polyline>
-      </svg>
-      Download Full CV
-    </a>
+    <div class="institution-block">
+      <p class="institution">
+        MSU-BIT SMBU Joint Research Center of Applied Mathematics<br>
+        <strong>Shenzhen MSU-BIT University</strong>, Shenzhen, China
+      </p>
+      <p class="partnership">
+        (A joint institution founded by Lomonosov Moscow State University, Russia &amp; Beijing Institute of Technology, China)
+      </p>
+    </div>
+
+    <div class="header-actions">
+      <!-- Prominent CV Download Button -->
+      <a href="cv.pdf" class="cv-button" aria-label="Download Curriculum Vitae">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        Download Full CV
+      </a>
+      
+      <p class="contact-email muted">
+        Email: <a href="mailto:arpan.mukherjee@smbu.edu.cn">arpan.mukherjee@smbu.edu.cn</a>
+      </p>
+    </div>
 
     <nav class="nav" aria-label="Quick links">
       <a class="badge" href="#education">Education</a>
