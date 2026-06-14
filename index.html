@@ -12,18 +12,18 @@
   
   <style>
     :root {
-      /* Elegant Light Olive Background Theme */
-      --bg-color: linear-gradient(135deg, #eceee5 0%, #d2d6c1 100%); 
+      /* Deep Olive Background Theme */
+      --bg-color: linear-gradient(135deg, #3a4432 0%, #20261b 100%); 
       --card-bg: #ffffff;
       --text-main: #0f172a; 
       --text-muted: #475569;
       
-      /* Vibrant Accents */
-      --primary: #2563eb; /* Royal blue */
-      --primary-hover: #1d4ed8;
-      --primary-light: #eff6ff;
-      --accent: #0ea5e9; /* Sky blue */
-      --journal-color: #0284c7; /* Distinct academic blue for journals */
+      /* Harmonized Moss & Olive Accents */
+      --primary: #2d6a4f; /* Sophisticated deep moss green */
+      --primary-hover: #1b4332;
+      --primary-light: #e8f5e9;
+      --accent: #52b788; /* Fresh accent green */
+      --journal-color: #1b4332; /* Distinct academic color for journals */
       --border: #e2e8f0; /* Crisp subtle borders */
       
       /* Sidebar Light Theme Match */
@@ -37,8 +37,8 @@
       
       /* Shadows & Radii for crisp, clean layer layout */
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
-      --shadow-lg: 0 10px 30px -4px rgba(0, 0, 0, 0.12);
+      --shadow-md: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 10px 30px -4px rgba(0, 0, 0, 0.3);
       --radius-lg: 14px;
       --radius-md: 8px;
       
@@ -190,7 +190,7 @@
     .badge:hover {
       background: var(--primary-light);
       color: var(--primary);
-      border-color: rgba(37, 99, 235, 0.2);
+      border-color: rgba(45, 106, 79, 0.2);
       transform: translateY(-1px);
     }
 
@@ -243,11 +243,6 @@
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border);
-      transition: transform 0.2s ease;
-    }
-
-    .visitor-module img:hover {
-      transform: scale(1.02);
     }
 
     .sidebar::-webkit-scrollbar { width: 0px; }
@@ -295,14 +290,14 @@
       margin-bottom: 12px;
       border-radius: var(--radius-md);
       overflow: hidden;
-      border: 1px solid #bae6fd;
+      border: 1px solid #c2f0d5;
       box-shadow: var(--shadow-sm);
     }
 
     .full-pub-table {
       width: 100%;
       border-collapse: collapse;
-      background: #f0f9ff;
+      background: #f4fbf7;
     }
 
     .full-pub-table td {
@@ -362,7 +357,7 @@
       border-radius: 6px;
       display: inline-block;
       text-align: center;
-      border: 1px solid rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(45, 106, 79, 0.08);
       white-space: nowrap;
     }
 
@@ -475,12 +470,12 @@
     footer {
       text-align: center;
       padding: 16px 0 8px;
-      color: var(--text-muted); /* Dark slate grey to contrast light olive bg */
+      color: #cbd5c2; /* Elegant light sage silver to stand out against deep olive bg */
       font-size: 0.85rem;
     }
 
     footer a {
-      color: var(--primary);
+      color: #a3b19b;
     }
     
     footer a:hover {
@@ -577,9 +572,7 @@
 
       <div class="visitor-module">
         <div class="visitor-title">Country-wise Visitors</div>
-        <a href="https://info.flagcounter.com/8Nf9" target="_blank">
-          <img src="https://s11.flagcounter.com/count2/8Nf9/bg_FFFFFF/txt_0F172A/border_E2E8F0/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">
-        </a>
+        <img src="https://s11.flagcounter.com/count2/8Nf9/bg_FFFFFF/txt_0F172A/border_E2E8F0/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Country-wise Visitors Counter" border="0">
       </div>
     </aside>
 
