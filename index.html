@@ -219,6 +219,67 @@
       text-decoration: none;
     }
 
+    /* Teaching Timeline Specific Layout */
+    .teaching-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 8px;
+    }
+
+    .timeline-item {
+      padding-left: 20px;
+      border-left: 2px solid var(--border);
+      position: relative;
+    }
+
+    /* Highlight the top-most (latest) semester */
+    .timeline-item:first-child {
+      border-left-color: var(--accent);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #cbd5e1;
+    }
+
+    .timeline-item:first-child::before {
+      background: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-light);
+    }
+
+    .term-tag {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .courses-taught {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .courses-taught li {
+      padding-left: 0;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .courses-taught li::before {
+      content: none;
+    }
+
     footer {
       margin-top: 64px;
       padding-top: 24px;
@@ -240,6 +301,8 @@
       .nav, footer, .cv-button { display: none; }
       .publications-container { border: none; padding: 0; }
       .pub-meta { border: none; padding: 0; }
+      .timeline-item { border: none; padding-left: 0; }
+      .timeline-item::before { display: none; }
     }
   </style>
 </head>
@@ -367,11 +430,31 @@
 
   <section id="teaching" aria-labelledby="teaching-h">
     <h2 id="teaching-h">Teaching</h2>
-    <ul>
-      <li><strong>Summer, 2026</strong> — Calculus 2</li>
-      <li><strong>Winter, 2025</strong> — Probability Theory and Mathematical Statistics, Linear Algebra, Mathematics for Biological Sciences (Calculus & Linear Algebra)</li>
-      <li><strong>Summer, 2025</strong> — Introduction to Mathematical Theory of Electromagnetism</li>
-    </ul>
+    
+    <div class="teaching-timeline">
+      <div class="timeline-item">
+        <div class="term-tag">Summer, 2026</div>
+        <ul class="courses-taught">
+          <li>Calculus 2</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="term-tag">Winter, 2025</div>
+        <ul class="courses-taught">
+          <li>Probability Theory and Mathematical Statistics</li>
+          <li>Linear Algebra</li>
+          <li>Mathematics for Biological Sciences <span class="muted" style="font-size:14px; font-weight:400;">(Calculus &amp; Linear Algebra)</span></li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="term-tag">Summer, 2025</div>
+        <ul class="courses-taught">
+          <li>Introduction to Mathematical Theory of Electromagnetism</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="service" aria-labelledby="service-h">
