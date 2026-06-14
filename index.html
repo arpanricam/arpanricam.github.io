@@ -3,165 +3,271 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Homepage</title>
+  <title>Dr. Arpan Mukherjee — Homepage</title>
   <meta name="description" content="Personal academic homepage" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <style>
-:root {
-  --page-width: 860px;
-  --text: #1a1a1a;
-  --muted: #5f6368;
-  --accent: #0b6cff;
-  --rule: #e6e6e6;
-  --bg: #f0f7ff;  
-  --link: #0b6cff;
-  --pub-bg: #f0f7ff;  /* New variable for publications background */
-}
+    :root {
+      --page-width: 800px;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --border: #e2e8f0;
+      --journal-color: #7c3aed;
+    }
 
-/* one and only one html,body block */
-html, body {
-  height: 100%;
-  background: var(--bg);
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0 auto;
-  max-width: var(--page-width);
-  padding: 48px 20px 72px;
-  color: var(--text);
-  font: 400 16px/1.65 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-}
+    html, body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
 
-    h1, h2, h3, h4, h5 { font-family: Merriweather, Georgia, serif; margin: 0 0 .3rem; color: #111; }
-    h1 { font-size: 32px; line-height: 1.2; }
-    h5 { font-size: 16px; letter-spacing: .02em; text-transform: none; color: #222; margin-top: 28px; }
-    p { margin: 0 0 .6rem; }
-    ul { margin: .3rem 0 .9rem 1.25rem; padding: 0; }
-    li { margin: .25rem 0; }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .muted { color: var(--muted); }
-    .rule { height: 1px; background: var(--rule); margin: 18px 0 14px; }
-    .top { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
-    .nav { display: flex; gap: 14px; flex-wrap: wrap; }
-    .badge { padding: 2px 8px; border-radius: 999px; background: #f3f5f7; border: 1px solid #e8eaed; font-size: 12px; }
+    body {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
 
-    /* Card-like boxes for lists you want to emphasize */
-    .card { border: 1px solid #e8eaed; border-radius: 12px; padding: 14px 16px; background: #fff; }
+    /* Header & Typography */
+    header {
+      margin-bottom: 40px;
+    }
 
-    /* Publications section with different background */
-    #publications {
-      background-color: var(--pub-bg);
+    h1 {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #475569;
+      margin: 48px 0 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    p {
+      margin: 0 0 16px 0;
+    }
+
+    strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* Links & Badges */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .muted {
+      color: var(--text-muted);
+    }
+
+    .nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .badge {
+      padding: 6px 14px;
+      border-radius: 30px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 500;
+      color: #475569;
+      transition: all 0.2s ease;
+    }
+
+    .badge:hover {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Structural Lists */
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+      font-weight: bold;
+    }
+
+    /* Section Specific Styles */
+    .institution {
+      font-size: 1.05rem;
+      color: #334155;
+    }
+
+    /* Unified Publications Block */
+    .publications-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .pub-meta {
+      background: var(--bg);
+      padding: 12px 16px;
       border-radius: 8px;
-      padding: 16px 20px;
-      margin: 20px 0;
+      font-size: 14px;
+      margin-bottom: 24px;
       border-left: 4px solid var(--accent);
     }
 
-    /* Small screen tweaks */
-    @media (max-width: 640px) {
-      body { padding: 28px 16px 48px; }
-      h1 { font-size: 26px; }
-      #publications { padding: 12px 16px; }
-    }
-
-    /* Print friendly */
-    @media print {
-      a { color: #000; text-decoration: underline; }
-      .nav { display: none; }
-      body { padding: 0; }
-      #publications { background: none; border-left: none; }
-    }
     .journal {
-  color: #6a1b9a;        /* change this to your preferred color */
-  font-weight: 600;      /* makes it slightly bold */
-}
+      color: var(--journal-color);
+      font-weight: 500;
+      font-style: italic;
+    }
 
+    /* Tiny modern pills for doc links */
+    .pub-link {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      background: #f1f5f9;
+      color: #475569;
+      border-radius: 4px;
+      margin-left: 4px;
+    }
+
+    .pub-link:hover {
+      background: var(--accent-light);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      body { padding: 32px 16px 64px; }
+      h1 { font-size: 1.8rem; }
+      .publications-container { padding: 16px; }
+    }
+
+    /* Print settings */
+    @media print {
+      body { background: #fff; color: #000; padding: 0; }
+      .nav, footer { display: none; }
+      .publications-container { border: none; padding: 0; }
+      .pub-meta { border: none; padding: 0; }
+    }
   </style>
 </head>
 <body>
-  <!--
-    Quick start (GitHub Pages):
-    1) Create a repo called <your-username>.github.io
-    2) Put this file in the root of that repo as index.html and commit.
-    3) Visit https://<your-username>.github.io
 
-    Customize everything below with your own details.
-  -->
-
-  <header class="top">
-    <div>
-      <h1 id="top">Dr. Arpan Mukherjee <span class="muted"></span></h1>
-      <p>Joint Research Center of Applied Mathematics — <strong>Shenzhen MSU-BIT University</strong>, Shenzhen, China</p>
-      <p class="muted">Email: <a href="mailto:arpan.mukherjee@smbu.edu.cn">arpan.mukherjee@smbu.edu.cn</a></p>
-      <div class="nav" aria-label="Quick links">
-        <a class="badge" href="#education">Education</a>
-        <a class="badge" href="#positions">Academic Positions</a>
-        <a class="badge" href="#interests">Research interests</a>
-        <a class="badge" href="#publications">Publications</a>
-        <a class="badge" href="#teaching">Teaching</a>
-        <a class="badge" href="#service">Service</a>
-        <a class="badge" href="#cv">CV</a>
-      </div>
-    </div>
+  <header>
+    <h1 id="top">Dr. Arpan Mukherjee</h1>
+    <p class="institution">Joint Research Center of Applied Mathematics — <strong>Shenzhen MSU-BIT University</strong>, Shenzhen, China</p>
+    <p class="muted">Email: <a href="mailto:arpan.mukherjee@smbu.edu.cn">arpan.mukherjee@smbu.edu.cn</a></p>
+    
+    <nav class="nav" aria-label="Quick links">
+      <a class="badge" href="#education">Education</a>
+      <a class="badge" href="#positions">Academic Positions</a>
+      <a class="badge" href="#interests">Research interests</a>
+      <a class="badge" href="#publications">Publications</a>
+      <a class="badge" href="#teaching">Teaching</a>
+      <a class="badge" href="#service">Service</a>
+      <a class="badge" href="#cv">CV</a>
+    </nav>
   </header>
 
-  <div class="rule" role="separator"></div>
-
   <section id="education" aria-labelledby="education-h">
-    <h5 id="education-h">Education</h5>
+    <h2 id="education-h">Education</h2>
     <ul>
       <li>
-  Ph.D. in Mathematics, Johannes Kepler Universität Linz, Austria, 2021–2023. 
-  <span class="muted">
-    (Mentors: 
-    <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a> 
-    and 
-    <a href="https://math.seu.edu.cn/whb_en/list.htm" target="_blank">Prof. Dr. Haibing Wang</a>)
-  </span>
-</li>
-      <li>M.Tech. in Industrial Mathematics and Scientific Computing, Indian Institute of Technology Madras, 2018–2020.</li>
-      <li>M.Sc. in Mathematics, Pondicherry University, 2015–2017.</li>
-      <li>B.Sc. in Mathematics, The University of Burdwan, 2011–2015.</li>
+        <strong>Ph.D. in Mathematics</strong>, Johannes Kepler Universität Linz, Austria, 2021–2023. 
+        <span class="muted"><br>Mentors: 
+          <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a> and 
+          <a href="https://math.seu.edu.cn/whb_en/list.htm" target="_blank">Prof. Dr. Haibing Wang</a>
+        </span>
+      </li>
+      <li><strong>M.Tech. in Industrial Mathematics and Scientific Computing</strong>, Indian Institute of Technology Madras, 2018–2020.</li>
+      <li><strong>M.Sc. in Mathematics</strong>, Pondicherry University, 2015–2017.</li>
+      <li><strong>B.Sc. in Mathematics</strong>, The University of Burdwan, 2011–2015.</li>
     </ul>
   </section>
 
   <section id="positions" aria-labelledby="positions-h">
-    <h5 id="positions-h">Academic Positions</h5>
+    <h2 id="positions-h">Academic Positions</h2>
     <ul>
-      <li>Lecturer (Tenure-Track Assistant Professor), Shenzhen MSU-BIT University, Shenzhen, China. 2024.08–present.</li>
-<li>
-  Postdoctoral Research Scientist, Johann Radon Institute (RICAM), Austrian Academy of Sciences, Austria, 2023.12–2024.07.
-  <span class="muted">
-    (Mentor: 
-    <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a>)
-  </span>
-</li>
-
-<li>
-  Doctoral Research Scientist, Johann Radon Institute (RICAM), Austrian Academy of Sciences, Austria, 2020.08–2023.11.
-  <span class="muted">
-    (Mentor: 
-    <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a>)
-  </span>
-</li>
-
+      <li><strong>Lecturer (Tenure-Track Assistant Professor)</strong>, Shenzhen MSU-BIT University, Shenzhen, China. 2024.08–present.</li>
       <li>
-  Visiting Researcher, Department of Mathematics & Steinbuch Center for Computing (SCC), Karlsruhe Institute of Technology (KIT), Germany, 2019.09–2020.03.
-  <span class="muted">
-    (Mentors:
-    <a href="https://math.iitm.ac.in/public_html/slnt/index.htm" target="_blank">Prof. Dr. Sundar S</a>
-    and
-    <a href="https://www.scc.kit.edu/personen/martin.frank.php" target="_blank">Prof. Dr. Martin Frank</a>)
-  </span>
-</li>
-
+        <strong>Postdoctoral Research Scientist</strong>, Johann Radon Institute (RICAM), Austrian Academy of Sciences, Austria, 2023.12–2024.07.
+        <span class="muted"><br>Mentor: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a></span>
+      </li>
+      <li>
+        <strong>Doctoral Research Scientist</strong>, Johann Radon Institute (RICAM), Austrian Academy of Sciences, Austria, 2020.08–2023.11.
+        <span class="muted"><br>Mentor: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a></span>
+      </li>
+      <li>
+        <strong>Visiting Researcher</strong>, Department of Mathematics & Steinbuch Center for Computing (SCC), Karlsruhe Institute of Technology (KIT), Germany, 2019.09–2020.03.
+        <span class="muted"><br>Mentors: 
+          <a href="https://math.iitm.ac.in/public_html/slnt/index.htm" target="_blank">Prof. Dr. Sundar S</a> and 
+          <a href="https://www.scc.kit.edu/personen/martin.frank.php" target="_blank">Prof. Dr. Martin Frank</a>
+        </span>
+      </li>
+    </ul>
   </section>
 
   <section id="interests" aria-labelledby="interests-h">
-    <h5 id="interests-h">Research interests</h5>
+    <h2 id="interests-h">Research Interests</h2>
     <ul>
       <li>Analysis of Partial Differential Equations</li>
       <li>Mathematical Materials Science</li>
@@ -169,95 +275,79 @@ body {
     </ul>
   </section>
 
- <section id="publications" aria-labelledby="publications-h">
-  <h5 id="publications-h">Publications</h5>
-  <p>
-    Full list (PDF): <a href="cv.pdf">Download</a> · 
-    ORCID: <a href="https://orcid.org/0000-0003-0472-9758" target="_blank">0000-0003-0472-9758</a> · 
-    Google Scholar: <a href="https://scholar.google.com/citations?user=EcAIWJ4AAAAJ&hl=en" target="_blank">View Profile</a>
-  </p>
-</section>
-
-
-<div class="card" style="margin-top:10px">
-<strong>Selected recent works</strong>
-<ul>
-<li>
-    X. Cao, A. Mukherjee, and M. Sini,
-    <em>Effective Medium Theory for Heat Generation Using Plasmonics: A Parabolic Transmission Problem Driven by the Maxwell System</em>,
-    <span class="journal"> Mathematische Annalen</span>, 2025.
-    <a href="https://doi.org/10.1007/s00208-025-03300-9">doi</a> · <a href=" 	
-https://doi.org/10.48550/arXiv.2411.18091">arXiv</a>
-</li>
-  <li>
-    A. Mukherjee and M. Sini,
-    <em>Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain</em>,
-    <span class="journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5616, 2023.
-    <a href="https://doi.org/10.1137/22M1533396" target="_blank">doi</a> · 
-    <a href="https://doi.org/10.48550/arXiv.2211.03382" target="_blank">arXiv</a>
-</li>
-    <li>
-    A. Mukherjee and M. Sini,
-    <em>Dispersive Effective Metasurface Model for Bubbly Media</em>,
-    <span class="journal">Journal of Differential Equations</span>, vol. 456, no. 113950, 2025.
-    <a href="https://doi.org/10.1016/j.jde.2025.113950" target="_blank">doi</a> · 
-    <a href="https://doi.org/10.48550/arXiv.2412.14895" target="_blank">arXiv</a>
-</li>
-<li>
-    A. Mukherjee and M. Sini,
-    <em>Dispersive Effective Model in the Time-Domain for Acoustic Waves Propagating in Bubbly Media</em>,
-    <span class="journal">SIAM Journal on Applied Mathematics</span>, vol. 85, no. 6, pp.2508–2542, 2025.
-    <a href="https://doi.org/10.1137/24M1692150" target="_blank">doi</a> · 
-    <a href="https://doi.org/10.48550/arXiv.2408.01158" target="_blank">arXiv</a>
-</li>
-
-<li>
-    A. Mukherjee and M. Sini,
-    <em>Heat Generation Using Lorentzian Nanoparticles. The Full Maxwell System</em>,
-    <span class="journal">SIAM Journal on Applied Mathematics</span>, vol. 84, no. 1, pp. 285–315, 2024.
-    <a href="https://doi.org/10.1137/23M1547597" target="_blank">doi</a> · 
-    <a href="https://doi.org/10.48550/arXiv.2301.06436" target="_blank">arXiv</a>
-</li>
-
-
-  </ul>
+  <section id="publications" aria-labelledby="publications-h">
+    <h2 id="publications-h">Publications</h2>
+    
+    <div class="publications-container">
+      <div class="pub-meta">
+        Full list (PDF): <a href="PubList.pdf">Download</a> &nbsp;·&nbsp; 
+        ORCID: <a href="https://orcid.org/0000-0003-0472-9758" target="_blank">0000-0003-0472-9758</a> &nbsp;·&nbsp; 
+        Google Scholar: <a href="https://scholar.google.com/citations?user=EcAIWJ4AAAAJ&hl=en" target="_blank">View Profile</a>
       </div>
 
+      <p style="margin-bottom: 12px;"><strong>Selected Recent Works</strong></p>
+      <ul>
+        <li>
+          X. Cao, A. Mukherjee, and M. Sini, 
+          <em>Effective Medium Theory for Heat Generation Using Plasmonics: A Parabolic Transmission Problem Driven by the Maxwell System</em>, 
+          <span class="journal">Mathematische Annalen</span>, 2025.
+          <a class="pub-link" href="https://doi.org/10.1007/s00208-025-03300-9" target="_blank">DOI</a><a class="pub-link" href="https://doi.org/10.48550/arXiv.2411.18091" target="_blank">arXiv</a>
+        </li>
+        <li>
+          A. Mukherjee and M. Sini, 
+          <em>Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain</em>, 
+          <span class="journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5616, 2023.
+          <a class="pub-link" href="https://doi.org/10.1137/22M1533396" target="_blank">DOI</a><a class="pub-link" href="https://doi.org/10.48550/arXiv.2211.03382" target="_blank">arXiv</a>
+        </li>
+        <li>
+          A. Mukherjee and M. Sini, 
+          <em>Dispersive Effective Metasurface Model for Bubbly Media</em>, 
+          <span class="journal">Journal of Differential Equations</span>, vol. 456, no. 113950, 2025.
+          <a class="pub-link" href="https://doi.org/10.1016/j.jde.2025.113950" target="_blank">DOI</a><a class="pub-link" href="https://doi.org/10.48550/arXiv.2412.14895" target="_blank">arXiv</a>
+        </li>
+        <li>
+          A. Mukherjee and M. Sini, 
+          <em>Dispersive Effective Model in the Time-Domain for Acoustic Waves Propagating in Bubbly Media</em>, 
+          <span class="journal">SIAM Journal on Applied Mathematics</span>, vol. 85, no. 6, pp.2508–2542, 2025.
+          <a class="pub-link" href="https://doi.org/10.1137/24M1692150" target="_blank">DOI</a><a class="pub-link" href="https://doi.org/10.48550/arXiv.2408.01158" target="_blank">arXiv</a>
+        </li>
+        <li>
+          A. Mukherjee and M. Sini, 
+          <em>Heat Generation Using Lorentzian Nanoparticles. The Full Maxwell System</em>, 
+          <span class="journal">SIAM Journal on Applied Mathematics</span>, vol. 84, no. 1, pp. 285–315, 2024.
+          <a class="pub-link" href="https://doi.org/10.1137/23M1547597" target="_blank">DOI</a><a class="pub-link" href="https://doi.org/10.48550/arXiv.2301.06436" target="_blank">arXiv</a>
+        </li>
+      </ul>
+    </div>
+  </section>
 
   <section id="teaching" aria-labelledby="teaching-h">
-    <h5 id="teaching-h">Teaching</h5>
+    <h2 id="teaching-h">Teaching</h2>
     <ul>
-            <li>(Summer, 2026) -- 1. Calculus 2</li>
-      <li>(Winter, 2025) -- 1. Probability Theory and Mathematical Statistics 2. Linear Algebra 3. Mathematics for Biological Sciences
-(Calculus & Linear Algebra)</li>
-      <li>Course Name (Summer, 2025)-- 1. Introduction to Mathematical Theory of Electromagnetism</li>
+      <li><strong>Summer, 2026</strong> — Calculus 2</li>
+      <li><strong>Winter, 2025</strong> — Probability Theory and Mathematical Statistics, Linear Algebra, Mathematics for Biological Sciences (Calculus & Linear Algebra)</li>
+      <li><strong>Summer, 2025</strong> — Introduction to Mathematical Theory of Electromagnetism</li>
     </ul>
   </section>
 
-
-
   <section id="service" aria-labelledby="service-h">
-    <h5 id="service-h">Service</h5>
+    <h2 id="service-h">Service</h2>
     <ul>
-      <li>Reviewer for Mathematical Models and Methods in Applied Sciences (M3AS)
-</li>
-      <li>Co-organizer, Minisymposium: "Inverse Problems for Evolution Equations", 12th Applied Inverse Problem Conference (AIP2025), Rio de Janeiro, Brazil, July 28-August 1, 2025.</li>
+      <li>Reviewer for <em>Mathematical Models and Methods in Applied Sciences (M3AS)</em></li>
+      <li><strong>Co-organizer</strong>, Minisymposium: "Inverse Problems for Evolution Equations", 12th Applied Inverse Problem Conference (AIP2025), Rio de Janeiro, Brazil, July 28–August 1, 2025.</li>
     </ul>
   </section>
 
   <section id="cv" aria-labelledby="cv-h">
-    <h5 id="cv-h">CV</h5>
-    <p><a href="cv.pdf">Download CV (PDF)</a></p>
+    <h2 id="cv-h">CV</h2>
+    <p><a href="cv.pdf" class="badge" style="display:inline-block;">Download CV (PDF)</a></p>
   </section>
 
-  <div class="rule" role="separator"></div>
-
   <footer>
-    <p class="muted">Last updated: <span id="last-updated"></span> · Built with plain HTML &amp; a dash of CSS · <a href="#top">Back to top</a></p>
+    <p class="muted">Last updated: <span id="last-updated"></span> · Built with plain HTML &amp; CSS · <a href="#top">Back to top</a></p>
   </footer>
 
   <script>
-    // Auto-fill last updated date
     (function(){
       const d = new Date(document.lastModified);
       document.getElementById('last-updated').textContent = d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'2-digit'});
