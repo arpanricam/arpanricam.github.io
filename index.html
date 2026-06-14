@@ -13,7 +13,7 @@
   <style>
     :root {
       /* Refined Color Palette */
-      --bg-color: #e9ecef; /* Richer soft grey background */
+      --bg-color: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Elegant soft gradient background */
       --card-bg: #ffffff;
       --text-main: #1f2937;
       --text-muted: #4b5563;
@@ -58,12 +58,14 @@
     }
 
     body {
-      background-color: var(--bg-color);
+      background: var(--bg-color);
+      background-attachment: fixed; /* Keeps gradient smooth on scroll */
       color: var(--text-main);
       font-family: var(--font-sans);
       font-size: 14px; /* Scaled down base font */
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
     }
 
     a {
@@ -571,185 +573,3 @@
             <span class="pub-authors">X. Cao, A. Mukherjee, and M. Sini,</span> 
             <span class="pub-title">"Effective Medium Theory for Heat Generation Using Plasmonics: A Parabolic Transmission Problem Driven by the Maxwell System,"</span> 
             <span class="pub-journal">Mathematische Annalen</span>, vol. 393, no. 2-3, pp. 3191–3281, 2025.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1007/s00208-025-03300-9" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2411.18091" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Dispersive Effective Metasurface Model for Bubbly Media,"</span> 
-            <span class="pub-journal">Journal of Differential Equations</span>, vol. 456, no. 113950, 2026.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1016/j.jde.2025.113950" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2412.14895" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Dispersive Effective Model in the Time-Domain for Acoustic Waves Propagating in Bubbly Media,"</span> 
-            <span class="pub-journal">SIAM Journal on Applied Mathematics</span>, vol. 85, no. 6, pp. 2508–2542, 2025.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1137/24M1692150" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2408.01158" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Heat Generation Using Lorentzian Nanoparticles. The Full Maxwell System,"</span> 
-            <span class="pub-journal">SIAM Journal on Applied Mathematics</span>, vol. 84, no. 1, pp. 285–315, 2024.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1137/23M1547597" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2301.06436" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
-            <span class="pub-title">"Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain,"</span> 
-            <span class="pub-journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5616, 2023.
-            <div class="pub-links">
-              <a href="https://doi.org/10.1137/22M1533396" target="_blank" class="pub-link">DOI</a>
-              <a href="https://doi.org/10.48550/arXiv.2211.03382" target="_blank" class="pub-link">arXiv</a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="positions" class="card">
-        <h2 class="section-title">Academic Positions</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="time-badge">Sept 2024—Present</div>
-            <div>
-              <div class="item-title">Lecturer (Tenure-Track Assistant Professor)</div>
-              <div class="item-subtitle">
-                <a href="#" target="_blank">MSU-BIT SMBU Joint Research Center of Applied Mathematics</a>, <a href="https://smbu.edu.cn" target="_blank">Shenzhen MSU-BIT University</a>, China.
-                <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px; font-style: italic;">(A joint institution founded by Lomonosov Moscow State University, Russia &amp; Beijing Institute of Technology, China)</p>
-              </div>
-              <div class="item-desc">Mentor: Prof. Dr. Hongyu Liu (Chair Professor, City University of Hong Kong)</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-badge">Dec 2023—July 2024</div>
-            <div>
-              <div class="item-title">Postdoctoral Research Scientist</div>
-              <div class="item-subtitle">Johann Radon Institute (RICAM), Austrian Academy of Sciences (ÖAW), Austria.</div>
-              <div class="item-desc">Project [FWF-P32660]: Electromagnetism with Extreme Materials: Modeling, Analysis and Applications.<br>Project Leader: Univ.-Doz. Dr. Mourad Sini</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-badge">Aug 2020—Nov 2023</div>
-            <div>
-              <div class="item-title">Doctoral Research Scientist</div>
-              <div class="item-subtitle">Johann Radon Institute (RICAM), Austrian Academy of Sciences (ÖAW), Austria.</div>
-              <div class="item-desc">Projects [FWF-P32660/36942]: Electromagnetism with Extreme Materials / Resolvent Analysis of Sub-wavelength Resonators.<br>Project Leader: Univ.-Doz. Dr. Mourad Sini</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-badge">Sep 2019—Mar 2020</div>
-            <div>
-              <div class="item-title">Visiting Researcher</div>
-              <div class="item-subtitle">Karlsruhe Institute of Technology (KIT), Germany.</div>
-              <div class="item-desc">Department of Mathematics &amp; Steinbuch Center for Computing (SCC).<br>Mentors: Prof. Dr. Sundar S &amp; Prof. Dr. Martin Frank</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" class="card">
-        <h2 class="section-title">Education</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="time-badge">Oct 2021—Nov 2023</div>
-            <div>
-              <div class="item-title">Doctor of Philosophy (Ph.D.) in Industrial Mathematics</div>
-              <div class="item-subtitle">Johannes Kepler University Linz, Austria</div>
-              <div class="item-desc">Thesis: <em>Mathematical Analysis of Therapy Modalities using Heat Generation or Acoustic Cavitation</em>.<br>Supervisors: Univ.-Doz. Dr. Mourad Sini &amp; Prof. Dr. Haibing Wang. Grade: 1 (Excellent).</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-badge">Aug 2018—May 2020</div>
-            <div>
-              <div class="item-title">M.Tech. in Industrial Mathematics &amp; Scientific Computing</div>
-              <div class="item-subtitle">Indian Institute of Technology Madras, India &amp; KIT, Germany</div>
-              <div class="item-desc">Thesis: <em>Approximate-Newton Approach for the Intrusive Polynomial Moment Method</em>.<br>Supervisors: Prof. Dr. Sundar S &amp; Prof. Dr. Martin Frank. Grade: 8.91/10.</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-badge">Aug 2015—May 2017</div>
-            <div>
-              <div class="item-title">M.Sc. in Mathematics</div>
-              <div class="item-subtitle">Pondicherry University (A Central University), India</div>
-              <div class="item-desc">Grade: 9.83/10.</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-badge">July 2011—July 2015</div>
-            <div>
-              <div class="item-title">B.Sc. in Mathematics</div>
-              <div class="item-subtitle">Vivekananda Mahavidyalaya, The University of Burdwan, India</div>
-              <div class="item-desc">Grade: 7.2/10.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="research" class="card">
-        <h2 class="section-title">Research Interests</h2>
-        <ul class="bullet-list">
-          <li><strong>Analysis of Partial Differential Equations:</strong> Investigating theoretical foundations and boundary value problems.</li>
-          <li><strong>Mathematical Materials Science:</strong> Modeling effective mediums and metamaterials.</li>
-          <li><strong>Mathematical Physics and Wave Propagation:</strong> Acoustics, electromagnetism, and time-domain analysis.</li>
-        </ul>
-      </section>
-
-      <section id="teaching" class="card">
-        <h2 class="section-title">Teaching & Service</h2>
-        
-        <h3 style="font-family: var(--font-serif); margin-bottom: 12px; font-size: 1.15rem; color: var(--primary);">Course Instructorships</h3>
-        <div class="timeline" style="margin-bottom: 24px;">
-          <div class="timeline-item">
-            <div class="time-badge">Summer 2026</div>
-            <div><div class="item-title">Calculus 2</div></div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-badge">Winter 2025</div>
-            <div>
-              <div class="item-title">Probability Theory and Mathematical Statistics</div>
-              <div class="item-title" style="margin-top: 4px;">Linear Algebra</div>
-              <div class="item-title" style="margin-top: 4px;">Mathematics for Biological Sciences (Calculus &amp; Linear Algebra)</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-badge">Summer 2025</div>
-            <div><div class="item-title">Introduction to Mathematical Theory of Electromagnetism</div></div>
-          </div>
-        </div>
-
-        <h3 style="font-family: var(--font-serif); margin-bottom: 12px; border-top: 1px solid var(--border); padding-top: 20px; font-size: 1.15rem; color: var(--primary);">Academic Service</h3>
-        <ul class="bullet-list">
-          <li><strong>Reviewer:</strong> Mathematical Models and Methods in Applied Sciences (M3AS).</li>
-          <li><strong>Co-organizer:</strong> Minisymposium "Inverse Problems for Evolution Equations", 12th Applied Inverse Problem Conference (AIP2025), Rio de Janeiro, Brazil, July 28–August 1, 2025.</li>
-        </ul>
-      </section>
-
-      <footer>
-        <p>Last updated: <span id="last-updated"></span> &nbsp;•&nbsp; <a href="#top">Back to top</a></p>
-      </footer>
-
-    </main>
-  </div>
-
-  <script>
-    (function(){
-      const d = new Date(document.lastModified);
-      document.getElementById('last-updated').textContent = d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'2-digit'});
-    })();
-  </script>
-</body>
-</html>
