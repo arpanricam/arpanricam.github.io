@@ -74,7 +74,7 @@
       margin: 0 auto;
       padding: 48px 24px;
       gap: 48px;
-      align-items: flex-start; /* Crucial for sticky sidebar */
+      align-items: flex-start;
     }
 
     /* --- STICKY SIDEBAR --- */
@@ -93,7 +93,6 @@
       overflow-y: auto;
     }
 
-    /* Subtle background glow in sidebar */
     .sidebar::before {
       content: '';
       position: absolute;
@@ -180,7 +179,6 @@
       box-shadow: var(--shadow-md);
     }
 
-    /* Vertical Navigation */
     .nav-menu {
       display: flex;
       flex-direction: column;
@@ -206,7 +204,6 @@
       background: rgba(255, 255, 255, 0.6);
     }
 
-    /* Hide scrollbar for sidebar */
     .sidebar::-webkit-scrollbar { width: 0px; }
     .sidebar { scrollbar-width: none; }
 
@@ -216,10 +213,9 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
-      min-width: 0; /* Prevents flex blowout on small screens */
+      min-width: 0;
     }
 
-    /* Beautiful Cards */
     .card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
@@ -253,7 +249,6 @@
       border-radius: 2px;
     }
 
-    /* Structured Layout Blocks */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -296,7 +291,6 @@
       color: var(--text-muted);
     }
 
-    /* Publications List */
     .pub-list {
       display: flex;
       flex-direction: column;
@@ -353,7 +347,6 @@
       color: #fff;
     }
 
-    /* Simple Lists */
     .bullet-list {
       list-style: none;
     }
@@ -372,7 +365,6 @@
       font-size: 0.9rem;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 24px 0;
@@ -380,7 +372,6 @@
       font-size: 0.9rem;
     }
 
-    /* Responsive */
     @media (max-width: 1024px) {
       .layout-wrapper {
         flex-direction: column;
@@ -421,7 +412,6 @@
 
   <div class="layout-wrapper">
     
-    <!-- STICKY SIDEBAR HERO -->
     <aside class="sidebar" id="top">
       <div class="profile-avatar" aria-hidden="true">AM</div>
       <h1 class="sidebar-title">Dr. Arpan Mukherjee</h1>
@@ -455,10 +445,8 @@
       </nav>
     </aside>
 
-    <!-- SCROLLING MAIN CONTENT -->
     <main class="content-area">
 
-      <!-- POSITIONS CARD -->
       <section id="positions" class="card">
         <h2 class="section-title">Academic Positions</h2>
         <div class="timeline">
@@ -490,13 +478,12 @@
             <div>
               <div class="item-title">Visiting Researcher</div>
               <div class="item-subtitle">Karlsruhe Institute of Technology (KIT), Germany</div>
-              <div class="item-desc">Mentors: Prof. Dr. Sundar S &amp; Prof. Dr. Martin Frank</div>
+              <div class="item-desc">Mentors: <a href="#" target="_blank">Prof. Dr. Sundar S</a> &amp; <a href="#" target="_blank">Prof. Dr. Martin Frank</a></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- EDUCATION CARD -->
       <section id="education" class="card">
         <h2 class="section-title">Education</h2>
         <div class="timeline">
@@ -505,7 +492,7 @@
             <div>
               <div class="item-title">Ph.D. in Mathematics</div>
               <div class="item-subtitle">Johannes Kepler Universität Linz, Austria</div>
-              <div class="item-desc">Mentors: Prof. Dr. Mourad Sini &amp; Prof. Dr. Haibing Wang</div>
+              <div class="item-desc">Mentors: <a href="http://people.ricam.oeaw.ac.at/m.sini/" target="_blank">Prof. Dr. Mourad Sini</a> &amp; <a href="#" target="_blank">Prof. Dr. Haibing Wang</a></div>
             </div>
           </div>
           <div class="timeline-item">
@@ -532,7 +519,6 @@
         </div>
       </section>
 
-      <!-- RESEARCH CARD -->
       <section id="research" class="card">
         <h2 class="section-title">Research Interests</h2>
         <ul class="bullet-list">
@@ -542,7 +528,6 @@
         </ul>
       </section>
 
-      <!-- PUBLICATIONS CARD -->
       <section id="publications" class="card">
         <h2 class="section-title">Selected Recent Works</h2>
         <div class="pub-list">
@@ -600,7 +585,6 @@
         </div>
       </section>
 
-      <!-- TEACHING & SERVICE CARD -->
       <section id="teaching" class="card">
         <h2 class="section-title">Teaching & Service</h2>
         
