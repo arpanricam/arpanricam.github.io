@@ -8,15 +8,15 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      /* Soft & Elegant Slate-Grey Background */
-      --bg-color: linear-gradient(135deg, #475569 0%, #1e293b 100%); 
+      /* Bright, Crisp & Modern Light Academic Theme */
+      --bg-color: #f1f5f9; /* Soft airy slate grey background */
       --card-bg: #ffffff;
-      --text-main: #1f2937;
-      --text-muted: #4b5563;
+      --text-main: #0f172a; /* Dark slate text for superb readability */
+      --text-muted: #475569;
       
       /* Vibrant Accents */
       --primary: #2563eb; /* Royal blue */
@@ -24,22 +24,21 @@
       --primary-light: #eff6ff;
       --accent: #0ea5e9; /* Sky blue */
       --journal-color: #0284c7; /* Distinct academic blue for journals */
-      --border: #e5e7eb;
+      --border: #e2e8f0; /* Crisp subtle borders */
       
-      /* Sidebar Dark Theme */
-      --sidebar-bg-1: #1e3a8a; /* Deep Indigo */
-      --sidebar-bg-2: #312e81; /* Midnight Purple */
-      --sidebar-text: #f8fafc;
-      --sidebar-muted: #93c5fd;
+      /* Sidebar Light Theme Match */
+      --sidebar-bg: #ffffff;
+      --sidebar-text: #0f172a;
+      --sidebar-muted: #64748b;
       
       /* Typography */
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
       
-      /* Shadows & Radii configured for dark backdrop */
-      --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-      --shadow-md: 0 12px 32px -6px rgba(0,0,0,0.3);
-      --shadow-lg: 0 20px 40px -8px rgba(0,0,0,0.4);
+      /* Shadows & Radii for crisp, clean layer layout */
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+      --shadow-lg: 0 10px 30px -4px rgba(15, 23, 42, 0.08);
       --radius-lg: 14px;
       --radius-md: 8px;
       
@@ -59,7 +58,6 @@
 
     body {
       background: var(--bg-color);
-      background-attachment: fixed; /* Keeps gradient smooth on scroll */
       color: var(--text-main);
       font-family: var(--font-sans);
       font-size: 14px;
@@ -88,42 +86,28 @@
       align-items: flex-start;
     }
 
-    /* --- STICKY SIDEBAR (DARK ELEGANT THEME) --- */
+    /* --- STICKY SIDEBAR (CLEAN BRIGHT RESUME STYLE) --- */
     .sidebar {
       width: var(--sidebar-width);
       flex-shrink: 0;
       position: sticky;
       top: 24px;
-      background: linear-gradient(135deg, var(--sidebar-bg-1) 0%, var(--sidebar-bg-2) 100%);
+      background: var(--sidebar-bg);
       color: var(--sidebar-text);
       border-radius: var(--radius-lg);
       padding: 32px 24px;
       text-align: center;
       box-shadow: var(--shadow-lg);
-      overflow: hidden;
+      border: 1px solid var(--border);
       max-height: calc(100vh - 48px);
       overflow-y: auto;
-    }
-
-    .sidebar::before {
-      content: '';
-      position: absolute;
-      top: -30%; left: -30%; width: 160%; height: 160%;
-      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .sidebar > * {
-      position: relative;
-      z-index: 1;
     }
 
     .profile-avatar {
       width: 72px;
       height: 72px;
-      background: #ffffff;
-      color: var(--sidebar-bg-1);
+      background: var(--primary-light);
+      color: var(--primary);
       font-family: var(--font-serif);
       font-size: 1.6rem;
       font-weight: 700;
@@ -132,15 +116,15 @@
       justify-content: center;
       border-radius: 50%;
       margin: 0 auto 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      border: 3px solid rgba(255, 255, 255, 0.2);
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--border);
     }
 
     .sidebar-title {
       font-family: var(--font-serif);
       font-size: 1.6rem;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--sidebar-text);
       margin-bottom: 4px;
       letter-spacing: -0.01em;
       line-height: 1.2;
@@ -155,26 +139,27 @@
 
     .sidebar-institution {
       font-size: 0.8rem;
-      color: #cbd5e1;
+      color: var(--text-muted);
       margin: 0 auto 20px;
       line-height: 1.4;
     }
     
     .sidebar-institution a {
-      color: #ffffff;
+      color: var(--primary);
       font-weight: 600;
-      border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+      border-bottom: 1px dotted var(--border);
     }
     
     .sidebar-institution a:hover {
-      border-bottom-color: #ffffff;
+      color: var(--primary-hover);
+      border-bottom-color: var(--primary-hover);
     }
 
     .institution-subtext {
       display: block;
       margin-top: 4px;
       font-size: 0.75rem;
-      color: #94a3b8;
+      color: var(--sidebar-muted);
       font-style: italic;
     }
 
@@ -190,21 +175,21 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(8px);
+      background: #f8fafc;
       padding: 8px 12px;
       border-radius: 8px;
       font-size: 0.8rem;
       font-weight: 600;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+      border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
       transition: all 0.2s ease;
     }
 
     .badge:hover {
-      background: #ffffff;
-      color: var(--sidebar-bg-1);
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: rgba(37, 99, 235, 0.2);
       transform: translateY(-1px);
     }
 
@@ -213,14 +198,14 @@
       flex-direction: column;
       gap: 2px;
       text-align: left;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-top: 1px solid var(--border);
       padding-top: 12px;
     }
 
     .nav-link {
       font-size: 0.8rem;
       font-weight: 600;
-      color: #cbd5e1;
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       padding: 8px 12px;
@@ -229,16 +214,16 @@
     }
 
     .nav-link:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
+      color: var(--primary);
+      background: var(--primary-light);
       padding-left: 16px;
     }
 
-    /* --- COUNTRY VISITOR MODULE --- */
+    /* --- COUNTRY VISITOR MODULE (LIGHT RENDERING RECONFIGURED) --- */
     .visitor-module {
       margin-top: 24px;
       padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-top: 1px solid var(--border);
       text-align: center;
     }
 
@@ -255,7 +240,8 @@
       max-width: 100%;
       height: auto;
       border-radius: var(--radius-md);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
       transition: transform 0.2s ease;
     }
 
@@ -280,7 +266,7 @@
       border-radius: var(--radius-lg);
       padding: 28px 32px;
       box-shadow: var(--shadow-md);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
     }
 
     .section-title {
@@ -411,6 +397,9 @@
       border-radius: var(--radius-md);
       background: #f8fafc;
       border-left: 3px solid var(--primary);
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
       transition: all 0.2s ease;
       font-size: 0.85rem;
     }
@@ -448,8 +437,9 @@
       font-weight: 700;
       text-transform: uppercase;
       padding: 3px 8px;
-      background: #e2e8f0;
+      background: #ffffff;
       color: #475569;
+      border: 1px solid var(--border);
       border-radius: 4px;
       letter-spacing: 0.05em;
       transition: all 0.2s;
@@ -458,6 +448,7 @@
     .pub-link:hover {
       background: var(--primary);
       color: #fff;
+      border-color: var(--primary);
     }
 
     .bullet-list {
@@ -483,12 +474,12 @@
     footer {
       text-align: center;
       padding: 16px 0 8px;
-      color: #cbd5e1; /* Made perfectly legible against slate background */
+      color: var(--text-muted);
       font-size: 0.85rem;
     }
 
     footer a {
-      color: #60a5fa;
+      color: var(--primary);
     }
     
     footer a:hover {
@@ -586,7 +577,7 @@
       <div class="visitor-module">
         <div class="visitor-title">Country-wise Visitors</div>
         <a href="https://info.flagcounter.com/8Nf9" target="_blank">
-          <img src="https://s11.flagcounter.com/count2/8Nf9/bg_1E3A8A/txt_FFFFFF/border_1E3A8A/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">
+          <img src="https://s11.flagcounter.com/count2/8Nf9/bg_FFFFFF/txt_0F172A/border_E2E8F0/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">
         </a>
       </div>
     </aside>
