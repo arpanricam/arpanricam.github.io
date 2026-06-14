@@ -236,25 +236,31 @@
 
     /* --- COUNTRY VISITOR MODULE --- */
     .visitor-module {
-      margin-top: 20px;
-      padding-top: 16px;
+      margin-top: 24px;
+      padding-top: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.15);
       text-align: center;
     }
 
     .visitor-title {
       font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--sidebar-muted);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .visitor-module img {
       max-width: 100%;
+      height: auto;
       border-radius: var(--radius-md);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .visitor-module img:hover {
+      transform: scale(1.02);
     }
 
     .sidebar::-webkit-scrollbar { width: 0px; }
@@ -574,9 +580,9 @@
       </nav>
 
       <div class="visitor-module">
-        <div class="visitor-title">Visitor Analytics</div>
+        <div class="visitor-title">Country-wise Visitors</div>
         <a href="https://info.flagcounter.com/8Nf9" target="_blank">
-          <img src="https://s11.flagcounter.com/mini/8Nf9/bg_1E3A8A/txt_FFFFFF/border_1E3A8A/flags_4/" alt="Flag Counter" border="0">
+          <img src="https://s11.flagcounter.com/count2/8Nf9/bg_1E3A8A/txt_FFFFFF/border_1E3A8A/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">
         </a>
       </div>
     </aside>
