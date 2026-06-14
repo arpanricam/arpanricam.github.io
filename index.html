@@ -12,8 +12,8 @@
   
   <style>
     :root {
-      /* Refined Color Palette */
-      --bg-color: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Elegant soft gradient background */
+      /* Deep & Rich Dark Theme Background */
+      --bg-color: linear-gradient(135deg, #0b1329 0%, #1e293b 100%); 
       --card-bg: #ffffff;
       --text-main: #1f2937;
       --text-muted: #4b5563;
@@ -36,15 +36,15 @@
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
       
-      /* Shadows & Radii */
-      --shadow-sm: 0 2px 4px rgba(0,0,0,0.02);
-      --shadow-md: 0 8px 20px -6px rgba(0,0,0,0.06);
-      --shadow-lg: 0 16px 24px -8px rgba(0,0,0,0.08);
-      --radius-lg: 14px; /* Tighter curves */
+      /* Shadows & Radii configured for dark backdrop */
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+      --shadow-md: 0 12px 32px -6px rgba(0,0,0,0.3);
+      --shadow-lg: 0 20px 40px -8px rgba(0,0,0,0.4);
+      --radius-lg: 14px;
       --radius-md: 8px;
       
       /* Layout */
-      --sidebar-width: 320px; /* Slimmer sidebar */
+      --sidebar-width: 320px;
     }
 
     * {
@@ -62,7 +62,7 @@
       background-attachment: fixed; /* Keeps gradient smooth on scroll */
       color: var(--text-main);
       font-family: var(--font-sans);
-      font-size: 14px; /* Scaled down base font */
+      font-size: 14px;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
@@ -83,8 +83,8 @@
       display: flex;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 24px 16px; /* Reduced outer padding */
-      gap: 24px; /* Much smaller layout gap */
+      padding: 24px 16px;
+      gap: 24px;
       align-items: flex-start;
     }
 
@@ -97,7 +97,7 @@
       background: linear-gradient(135deg, var(--sidebar-bg-1) 0%, var(--sidebar-bg-2) 100%);
       color: var(--sidebar-text);
       border-radius: var(--radius-lg);
-      padding: 32px 24px; /* Compacted layout metrics */
+      padding: 32px 24px;
       text-align: center;
       box-shadow: var(--shadow-lg);
       overflow: hidden;
@@ -120,7 +120,7 @@
     }
 
     .profile-avatar {
-      width: 72px; /* Scaled down avatar dimensions */
+      width: 72px;
       height: 72px;
       background: #ffffff;
       color: var(--sidebar-bg-1);
@@ -138,7 +138,7 @@
 
     .sidebar-title {
       font-family: var(--font-serif);
-      font-size: 1.6rem; /* Compact title scaling */
+      font-size: 1.6rem;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 4px;
@@ -181,7 +181,7 @@
     .action-col {
       display: flex;
       flex-direction: column;
-      gap: 8px; /* Tighter button gaps */
+      gap: 8px;
       margin-bottom: 24px;
     }
 
@@ -234,6 +234,29 @@
       padding-left: 16px;
     }
 
+    /* --- COUNTRY VISITOR MODULE --- */
+    .visitor-module {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      text-align: center;
+    }
+
+    .visitor-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--sidebar-muted);
+      margin-bottom: 10px;
+    }
+
+    .visitor-module img {
+      max-width: 100%;
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
     .sidebar::-webkit-scrollbar { width: 0px; }
     .sidebar { scrollbar-width: none; }
 
@@ -242,21 +265,21 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      gap: 20px; /* Highly decreased space between cards */
+      gap: 20px;
       min-width: 0;
     }
 
     .card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
-      padding: 28px 32px; /* Tighter internal card padding */
+      padding: 28px 32px;
       box-shadow: var(--shadow-md);
-      border: 1px solid rgba(229, 231, 235, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .section-title {
       font-family: var(--font-serif);
-      font-size: 1.4rem; /* Scaled down section headings */
+      font-size: 1.4rem;
       color: var(--text-main);
       margin-bottom: 20px;
       position: relative;
@@ -276,7 +299,7 @@
 
     /* --- COMPACT FULL PUBLICATION TABLE --- */
     .full-pub-wrapper {
-      margin-bottom: 12px; /* Smaller gap below table */
+      margin-bottom: 12px;
       border-radius: var(--radius-md);
       overflow: hidden;
       border: 1px solid #bae6fd;
@@ -290,13 +313,13 @@
     }
 
     .full-pub-table td {
-      padding: 10px 14px; /* Thinner cell padding */
+      padding: 10px 14px;
       vertical-align: middle;
     }
 
     .fpt-text {
       color: var(--text-main);
-      font-size: 0.85rem; /* Marginally scaled down text */
+      font-size: 0.85rem;
     }
 
     .fpt-action {
@@ -310,7 +333,7 @@
       gap: 5px;
       background: var(--primary);
       color: #fff;
-      padding: 6px 12px; /* More standard button dimension */
+      padding: 6px 12px;
       border-radius: 6px;
       font-size: 0.75rem;
       font-weight: 700;
@@ -327,12 +350,12 @@
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 16px; /* Tightened timeline gaps */
+      gap: 16px;
     }
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 135px 1fr; /* Widened slightly to elegantly support full text dates */
+      grid-template-columns: 135px 1fr;
       gap: 16px;
       align-items: baseline;
     }
@@ -351,7 +374,7 @@
     }
 
     .item-title {
-      font-size: 0.95rem; /* Reduced sizes for list titles */
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text-main);
       margin-bottom: 2px;
@@ -374,16 +397,16 @@
     .pub-list {
       display: flex;
       flex-direction: column;
-      gap: 8px; /* Tighter publication separating gap */
+      gap: 8px;
     }
 
     .pub-item {
-      padding: 10px 14px; /* Reduced vertical space significantly */
+      padding: 10px 14px;
       border-radius: var(--radius-md);
       background: #f8fafc;
       border-left: 3px solid var(--primary);
       transition: all 0.2s ease;
-      font-size: 0.85rem; /* Scaled down content size */
+      font-size: 0.85rem;
     }
 
     .pub-item:hover {
@@ -398,18 +421,18 @@
     }
 
     .pub-authors {
-      font-weight: 700; /* Bold author names */
+      font-weight: 700;
       color: var(--text-main);
     }
 
     .pub-journal {
       font-style: italic;
-      color: var(--journal-color); /* Distinct color for journal names */
+      color: var(--journal-color);
       font-weight: 700;
     }
 
     .pub-links {
-      margin-top: 6px; /* Trimmed margin spacing */
+      margin-top: 6px;
       display: flex;
       gap: 6px;
     }
@@ -453,9 +476,13 @@
 
     footer {
       text-align: center;
-      padding: 12px 0 8px;
-      color: var(--text-muted);
+      padding: 16px 0 8px;
+      color: #94a3b8; /* Explicitly visible lighter font for dark mode background */
       font-size: 0.85rem;
+    }
+
+    footer a {
+      color: #3b82f6;
     }
 
     @media (max-width: 1024px) {
@@ -545,6 +572,13 @@
         <a href="#research" class="nav-link">Research</a>
         <a href="#teaching" class="nav-link">Teaching</a>
       </nav>
+
+      <div class="visitor-module">
+        <div class="visitor-title">Visitor Analytics</div>
+        <a href="https://info.flagcounter.com/8Nf9" target="_blank">
+          <img src="https://s11.flagcounter.com/mini/8Nf9/bg_1E3A8A/txt_FFFFFF/border_1E3A8A/flags_4/" alt="Flag Counter" border="0">
+        </a>
+      </div>
     </aside>
 
     <main class="content-area">
@@ -612,7 +646,7 @@
           <div class="pub-item">
             <span class="pub-authors">A. Mukherjee and M. Sini,</span> 
             <span class="pub-title">"Acoustic Cavitation using Resonating Micro-Bubbles. Analysis in the Time-Domain,"</span> 
-            <span class="pub-journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5616, 2023.
+            <span class="pub-journal">SIAM Journal on Mathematical Analysis</span>, vol. 55, no. 5, pp. 5575–5516, 2023.
             <div class="pub-links">
               <a href="https://doi.org/10.1137/22M1533396" target="_blank" class="pub-link">DOI</a>
               <a href="https://doi.org/10.48550/arXiv.2211.03382" target="_blank" class="pub-link">arXiv</a>
